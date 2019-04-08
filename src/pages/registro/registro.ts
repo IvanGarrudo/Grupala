@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ContactService } from '../../services/contact.service';
+import { Observable } from 'rxjs/Observable';
+import { Login } from '../../models/contact.model';
 
 /**
  * Generated class for the RegistroPage page.
@@ -15,12 +17,41 @@ import { ContactService } from '../../services/contact.service';
   templateUrl: 'registro.html',
 })
 export class RegistroPage {
+  login$: Observable<Login[]>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private ContactService:ContactService) {
+  }
+  ionViewWillEnter(){
+    this.login$ = this.ContactService
+    .getContacts()
+    .snapshotChanges()
+    .map(
+      changes => {
+        return changes.map(c=> ({
+          key: c.payload.key, ...c.payload.val()
+              }));
+      }
+    );
   }
 
+  /*onLoadRegistroPage(){
+    this.navCtrl.push(RegistroPage);
+
+  }
+
+  onItemTapped($event, contact){
+    
+  }
+  
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegistroPage');
+  }*/
+
+  
+  onAddMember(value: Login){
+    this.ContactService.addMember(value);
+    this.navCtrl.pop();
   }
 
 }
+

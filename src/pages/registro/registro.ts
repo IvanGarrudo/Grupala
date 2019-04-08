@@ -66,5 +66,7 @@ export class RegistroPage {
     this.navCtrl.goToRoot;
   }
 
+  
+
 }
 

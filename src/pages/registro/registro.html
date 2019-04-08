@@ -39,8 +39,10 @@
           <ion-checkbox ngModel required name="aceptaCondiciones"></ion-checkbox><ion-label text-wrap>He leído y acepto las condiciones de uso</ion-label>
         </ion-item>
     </ion-list>
-    
-    <button ion-button block type="submit" [disabled]="!f.valid" class="elemento">Aceptar</button>
+    <ion-list class="botonera">
+      <button ion-button block type="submit" [disabled]="!f.valid" class="botones">Aceptar</button> 
+      <button ion-back-button class="botones" id="boton_cancelar">CANCELAR</button>
+    </ion-list>
   </form>
 
 </ion-content>

@@ -17,7 +17,4 @@ export class ContactService{
 
     }
 
-    getContacts(){
-        return this.contactsRef;
-    }
 }

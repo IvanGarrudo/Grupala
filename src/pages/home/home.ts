@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { Login } from "../../models/contact.model";
-import { AngularFireDatabase } from 'angularfire2/database';
 
 @Component({
   selector: 'page-home',
@@ -9,13 +7,8 @@ import { AngularFireDatabase } from 'angularfire2/database';
 })
 export class HomePage {
 
-  private contactsRef=this.db.list<Login>('AgendaFirebase');
-  constructor(private db:AngularFireDatabase) {
+  constructor(public navCtrl: NavController) {
 
-  }
-
-  onAddMemeber(value: Login){
-    return this.contactsRef.push(value);
   }
 
 }

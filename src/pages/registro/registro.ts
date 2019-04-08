@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ContactService } from '../../services/contact.service';
 import { Observable } from 'rxjs/Observable';
 import { Login } from '../../models/contact.model';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the RegistroPage page.
@@ -61,7 +62,8 @@ export class RegistroPage {
   
   onAddMember(value: Login){
     this.ContactService.addMember(value);
-    this.navCtrl.pop();
+    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.goToRoot;
   }
 
 }

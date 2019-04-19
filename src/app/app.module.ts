@@ -14,13 +14,15 @@ import { FIREBASE_CONFIG } from '../app/firebase.credentials';
 import {AngularFireModule} from 'angularfire2';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
 import { ContactService } from '../services/contact.service';
+import { LoginPage } from '../pages/login/login';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListPage,
-    RegistroPage
+    RegistroPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,8 @@ import { ContactService } from '../services/contact.service';
     MyApp,
     HomePage,
     ListPage,
-    RegistroPage
+    RegistroPage,
+    LoginPage
   ],
   providers: [
     StatusBar,

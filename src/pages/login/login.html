@@ -10,19 +10,27 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-  <h3>Inicio de Sesion</h3>
-  <form (ngSubmit)="onAddMember(f.value)" #f="ngForm">
+  <h3 class="elemento">Inicio de Sesion</h3>
+  <form (ngSubmit)="comprobar(f.value)" #f="ngForm" class="formulario">
+   
     <ion-list>
-      <ion-item>
-        <ion-label>Nombre de usuario</ion-label>
+      <ion-item class="elemento" >
+        <ion-label >Nombre de usuario</ion-label>
+      </ion-item>
+      <ion-item class="conBorde">
         <ion-input type="text" placeholder="Texto" name="nusuario" ngModel required></ion-input>
       </ion-item>
-      <ion-item>
+      <ion-item class="elemento">
         <ion-label>Contraseña</ion-label>
+      </ion-item>
+      <ion-item class="conBorde">
         <ion-input type="Text" placeholder="Texto" name="cusuario" ngModel required></ion-input>
       </ion-item>
     </ion-list>
-    <button ion-button block type="submit" [disabled]="!f.valid">Aceptar</button>
+    <ion-list class="botonera">
+      <button ion-button block type="submit" [disabled]="!f.valid" class="botones">Aceptar</button> 
+      <button ion-button block class="botones" id="boton_registro" ng-click="registro()">¿No tines cuenta?</button>
+    </ion-list>
   </form>
   
 </ion-content>

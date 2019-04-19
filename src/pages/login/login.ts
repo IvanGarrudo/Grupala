@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ContactService } from '../../services/contact.service';
 import { Observable } from 'rxjs/Observable';
 import { Login } from '../../models/contact.model';
+import { RegistroPage } from '../registro/registro';
 
 /**
  * Generated class for the LoginPage page.
@@ -24,7 +25,10 @@ export class LoginPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
-  addMember(value: Login){
+  comprobar(value: Login){
+
+  }
+  getContacts(value: Login){
     //Buscar el señor correspondiente en la base de datos y comprobar que la contraseña es igual
   }
   Hash(contraseña: string){
@@ -39,6 +43,11 @@ export class LoginPage {
       total=total+etral;
     }
     return total;
+  }
+  registro(){    
+    console.log("aylmao")
+    this.navCtrl.setRoot(RegistroPage);
+    this.navCtrl.goToRoot;
   }
 
 }

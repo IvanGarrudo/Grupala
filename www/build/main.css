@@ -25692,6 +25692,57 @@ ion-navbar.toolbar {
   min-height: 46px;
 }
 
+.buscador {
+  width: 100%;
+}
+
+.entrada {
+  width: 60%;
+  margin: 0 auto;
+  float: left;
+}
+
+.boton {
+  width: 20%;
+  margin: 0 auto;
+  float: right;
+}
+
+.formulario {
+  width: 100%;
+}
+
+.elemento {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.conBorde {
+  margin: 0 auto;
+  border: 1px solid black;
+  width: 80%;
+}
+
+.botones {
+  width: 60%;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.botonera {
+  text-align: center;
+}
+
+#boton_registro {
+  background-color: #0e2f88;
+  font-size: 13px;
+  vertical-align: middle;
+  font-weight: bold;
+  height: 36px;
+  border-radius: 5px;
+}
+
 .formulario {
   width: 100%;
 }

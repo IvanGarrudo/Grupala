@@ -1,3 +1,33 @@
-page-login {
+.formulario{
+    width:100%;
+}
+.elemento{
+	width: 80%;
+	text-align: center;
+    margin: 0 auto;
+}
 
+.conBorde{
+    margin: 0 auto;
+    border: 1px solid black;
+    width:80%;
+}
+
+.botones{
+	width:60%;
+    margin: 0 auto;    
+    display: inline-block;
+}
+
+.botonera{
+    text-align:center;
+}
+
+#boton_registro{
+    background-color: rgb(14, 47, 136);
+    font-size: 13px;
+    vertical-align:middle;
+    font-weight:bold;
+    height:36px;
+    border-radius:5px;
 }

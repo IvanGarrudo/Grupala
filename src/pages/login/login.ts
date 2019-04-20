@@ -27,11 +27,7 @@ export class LoginPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
-<<<<<<< HEAD
   comprobar(value: Login){
-=======
-    comprobar(value: Login){
->>>>>>> 0375fe4d671e7a490821062f4b301889126c503b
     this.ionViewWillEnter();
     var sesion = false;
     
@@ -41,20 +37,9 @@ export class LoginPage {
     }else{
       alert("Usuario o contraseña no validos")
     }
-<<<<<<< HEAD
-=======
   }
 
-  ionViewWillEnter(){
-    this.contacts$ = this.ContactService.getContacts().snapshotChanges().map(
-      changes => {
-        return changes.map(c=> ({
-          key: c.payload.key, ...c.payload.val()
-        }));
-      }
-    );
->>>>>>> 0375fe4d671e7a490821062f4b301889126c503b
-  }
+ 
 
   ionViewWillEnter(){
     this.contacts$ = this.ContactService.getContacts().snapshotChanges().map(

@@ -29,7 +29,6 @@ export class LoginPage {
   }
   comprobar(value: Login){
     this.ionViewWillEnter();
-    console.log(this.contacts$[2]) ;
     var sesion = false;
     
     if(sesion){

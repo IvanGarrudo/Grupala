@@ -27,9 +27,11 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
   comprobar(value: Login){
-    
-    this.navCtrl.setRoot(HomePage);
-    this.navCtrl.goToRoot;
+    if(value.cusuario != ""){
+      this.navCtrl.setRoot(HomePage);
+      this.navCtrl.goToRoot;
+    }
+   /* */
   }
  
   goToSignup(){

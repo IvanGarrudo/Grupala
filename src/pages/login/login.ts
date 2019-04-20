@@ -26,12 +26,26 @@ export class LoginPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
-  comprobar(value: Login){
-    if(value.cusuario != ""){
+    comprobar(value: Login){
+    this.ionViewWillEnter();
+    var sesion = false;
+    
+    if(sesion){
       this.navCtrl.setRoot(HomePage);
       this.navCtrl.goToRoot;
+    }else{
+      alert("Usuario o contraseña no validos")
     }
-   /* */
+  }
+
+  ionViewWillEnter(){
+    this.contacts$ = this.ContactService.getContacts().snapshotChanges().map(
+      changes => {
+        return changes.map(c=> ({
+          key: c.payload.key, ...c.payload.val()
+        }));
+      }
+    );
   }
  
   goToSignup(){

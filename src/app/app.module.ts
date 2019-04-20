@@ -22,7 +22,6 @@ import { LoginPage } from '../pages/login/login';
     MyApp,
     HomePage,
     ListPage,
-    RegistroPage,
     LoginPage
   ],
   imports: [
@@ -30,6 +29,7 @@ import { LoginPage } from '../pages/login/login';
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     AngularFireDatabaseModule,
+    RegistroPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ContactService } from '../../services/contact.service';
 import { Observable } from 'rxjs/Observable';
@@ -19,18 +19,37 @@ import { HomePage } from '../home/home';
   templateUrl: 'login.html',
 })
 export class LoginPage {
+  contacts$: Observable<Login[]>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private ContactService:ContactService) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
   comprobar(value: Login){
+    this.ionViewWillEnter();
+    console.log(this.contacts$[2]) ;
+    var sesion = false;
     
-    this.navCtrl.setRoot(HomePage);
-    this.navCtrl.goToRoot;
+    if(sesion){
+      this.navCtrl.setRoot(HomePage);
+      this.navCtrl.goToRoot;
+    }else{
+      alert("Usuario o contraseña no validos")
+    }
   }
+
+  ionViewWillEnter(){
+    this.contacts$ = this.ContactService.getContacts().snapshotChanges().map(
+      changes => {
+        return changes.map(c=> ({
+          key: c.payload.key, ...c.payload.val()
+        }));
+      }
+    );
+  }
+   
  
   goToSignup(){
     this.navCtrl.push(RegistroPage);

@@ -4,6 +4,7 @@ import { ContactService } from '../../services/contact.service';
 import { Observable } from 'rxjs/Observable';
 import { Login } from '../../models/contact.model';
 import { RegistroPage } from '../registro/registro';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the LoginPage page.
@@ -26,28 +27,13 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
   comprobar(value: Login){
-
-  }
-  getContacts(value: Login){
-    //Buscar el señor correspondiente en la base de datos y comprobar que la contraseña es igual
-  }
-  Hash(contraseña: string){
-    var temporal:number[];
-    var i =0;
-    var total=0;
-    for (var letra of contraseña) {
-      temporal[i]=(contraseña.charCodeAt(i)*i);
-      i++;
-    }
-    for (var etral of temporal) {
-      total=total+etral;
-    }
-    return total;
-  }
-  registro(){    
-    console.log("aylmao")
-    this.navCtrl.setRoot(RegistroPage);
+    
+    this.navCtrl.setRoot(HomePage);
     this.navCtrl.goToRoot;
+  }
+ 
+  goToSignup(){
+    this.navCtrl.push(RegistroPage);
   }
 
 }

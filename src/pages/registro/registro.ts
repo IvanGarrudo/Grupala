@@ -33,19 +33,7 @@ export class RegistroPage {
       }
     );
   }
-  Hash(contraseña: string){
-    var temporal:number[];
-    var i =0;
-    var total=0;
-    for (var letra of contraseña) {
-      temporal[i]=(contraseña.charCodeAt(i)*i);
-      i++;
-    }
-    for (var etral of temporal) {
-      total=total+etral;
-    }
-    return total;
-  }
+ 
   /*onLoadRegistroPage(){
     this.navCtrl.push(RegistroPage);
 

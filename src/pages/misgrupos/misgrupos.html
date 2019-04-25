@@ -1,0 +1,38 @@
+<!--
+  Generated template for the MisGruposPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>MisGrupos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-buttons end>
+    <button ion-button icon-only (click)="onLoadGroupPage()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+</ion-buttons>
+
+<ion-content padding>
+  <ion-searchbar animated [(ngModel)]="searchTerm" (ionChange)="setFilteredItems()"></ion-searchbar>
+
+
+  <ion-list>
+    <button ion-item *ngFor="let group of groups">
+      <tr>
+        <td>
+            <ion-avatar><img [src]="group.foto"></ion-avatar>
+        </td>
+        <td>
+          <h2>{{group.ngroup}}</h2>
+          <h3>{{group.type}}</h3>
+        </td>
+      </tr>
+    </button>
+  </ion-list>
+</ion-content>
+

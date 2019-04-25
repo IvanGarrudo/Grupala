@@ -19,8 +19,8 @@ import { HomePage } from '../home/home';
   templateUrl: 'login.html',
 })
 export class LoginPage {
-  contacts$: Observable<Login[]>;
-
+  contacts:Login[] =[]
+  
   constructor(public navCtrl: NavController, public navParams: NavParams, private ContactService:ContactService) {
   }
 
@@ -28,28 +28,20 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
   comprobar(value: Login){
-    this.ionViewWillEnter();
-    var sesion = false;
-    
-    if(sesion){
-      this.navCtrl.setRoot(HomePage);
-      this.navCtrl.goToRoot;
-    }else{
-      alert("Usuario o contraseña no validos")
-    }
+    ContactService.getContacts().then(this.contacts){
+      var sesion = false;
+      console.log(this.contacts)
+      if(sesion){
+        this.navCtrl.setRoot(HomePage);
+        this.navCtrl.goToRoot;
+      }else{
+        alert("Usuario o contraseña no validos")
+      }      
+    }    
   }
 
  
 
-  ionViewWillEnter(){
-    this.contacts$ = this.ContactService.getContacts().snapshotChanges().map(
-      changes => {
-        return changes.map(c=> ({
-          key: c.payload.key, ...c.payload.val()
-        }));
-      }
-    );
-  }
    
  
   goToSignup(){

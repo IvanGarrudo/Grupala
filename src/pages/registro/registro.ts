@@ -22,17 +22,7 @@ export class RegistroPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private ContactService:ContactService) {
   }
-  ionViewWillEnter(){
-    this.login$ = this.ContactService.getContacts()
-    .snapshotChanges()
-    .map(
-      changes => {
-        return changes.map(c=> ({
-          key: c.payload.key, ...c.payload.val()
-              }));
-      }
-    );
-  }
+  
  
   /*onLoadRegistroPage(){
     this.navCtrl.push(RegistroPage);

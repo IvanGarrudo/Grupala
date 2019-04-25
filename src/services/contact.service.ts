@@ -3,8 +3,8 @@ import { AngularFireDatabase } from "angularfire2/database";
 import { Login } from "../models/contact.model";
 
 @Injectable()
-export class ContactService{ 
-    contacts$: Promise <Login[]>; 
+export class ContactService{
+  
 
     private contactsRef=this.db.list<Login>('AgendaFirebase');
     
@@ -19,7 +19,7 @@ export class ContactService{
 
     }
 
-    getContacts():Promise<Login[]>{
-        return this.contactsRef.toPromise();
+    getContacts(){
+        return this.contactsRef.valueChanges().toPromise();
     }
 }

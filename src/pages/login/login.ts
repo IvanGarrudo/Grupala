@@ -19,16 +19,17 @@ import { HomePage } from '../home/home';
   templateUrl: 'login.html',
 })
 export class LoginPage {
-  contacts:Login[] =[]
+  contacts:PromiseLike<Login[]>;
   
-  constructor(public navCtrl: NavController, public navParams: NavParams, private ContactService:ContactService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private ContactService : ContactService) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
-  comprobar(value: Login){
-    ContactService.getContacts().then(this.contacts){
+
+  comprobar(a: Login){
+    /*this.ContactService.getContacts().then(this.contacts){
       var sesion = false;
       console.log(this.contacts)
       if(sesion){
@@ -37,12 +38,8 @@ export class LoginPage {
       }else{
         alert("Usuario o contraseña no validos")
       }      
-    }    
-  }
-
- 
-
-   
+    } */   
+  }   
  
   goToSignup(){
     this.navCtrl.push(RegistroPage);

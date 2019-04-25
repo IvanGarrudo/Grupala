@@ -6,13 +6,33 @@ page-home {
     width:100%;
 }
 .entrada{
-    width:60%;
+    width:75%;
     margin: 0 auto;   
     float: left;  
 }
 .boton{
-    width:20%;
-    margin: 0 auto;   
+    width:25%;
+    font-size: 11pt;
+    margin: 0 auto;  
+    margin-top: 2%;   
     float: right; 
+}
+.titulo{
+    font-size: 14pt;
+    font-weight:bold;
+}
+
+.tabla{
+    border: black 2px solid;
+    height: 100%;
+    
+}
+.tabla{
+    border: black 2px solid;
+    height: 100%;
+    
+}
+.tabla:hover{
+    background: red;
 }
 

@@ -7,3 +7,10 @@ export interface Login {
     eusuario: string;
     
 }
+export interface info {
+
+    nombre : string;
+    
+    inf: string;
+    
+}

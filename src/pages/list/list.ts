@@ -8,6 +8,7 @@ import { NavController, NavParams } from 'ionic-angular';
 export class ListPage {
   selectedItem: any;
   icons: string[];
+  nombres: string[];
   items: Array<{title: string, note: string, icon: string}>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
@@ -17,14 +18,23 @@ export class ListPage {
     // Let's populate this page with some filler content for funzies
     this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
     'american-football', 'boat', 'bluetooth', 'build'];
-
+    this.nombres = ['Jaime2033', 'anacletus', 'AngieEd', 'iñaquigur', 'mildred22', '3333232xXx23323',
+    'americio', 'bobobobobobo', 'MrTooth', 'Ñamec'];
     this.items = [];
     for (let i = 1; i < 11; i++) {
-      this.items.push({
-        title: 'Item ' + i,
-        note: 'This is item #' + i,
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-      });
+      if(i<4){
+        this.items.push({
+          title: this.nombres[i-1],
+          note: "Admin" ,
+          icon: this.icons[i-1]
+        });
+      }      else{
+        this.items.push({
+          title: this.nombres[i-1],
+          note: "" ,
+          icon: this.icons[i-1]
+        });
+      }
     }
   }
 

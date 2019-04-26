@@ -1,0 +1,34 @@
+<!--
+  Generated template for the InfoGrupoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>info grupo</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <form (ngSubmit)="update(f.value)" #f="ngForm" class="formulario">
+        <ion-item text-wrap class="elemento">En caso de querer modificar el grupo rellene los siguientes campos.</ion-item>
+        <ion-list>
+          <ion-item class="elemento" >
+            <ion-label >Nuevo nombre del Grupo</ion-label>
+          </ion-item>
+          <ion-item class="conBorde">
+            <ion-input type="text" placeholder="Texto" name="nombre" ngModel required></ion-input>
+          </ion-item>
+          <ion-item class="elemento">
+            <ion-label>Nueva descipción del Grupo</ion-label>
+          </ion-item>
+          <ion-item class="conBorde">
+            <ion-input type="text" placeholder="Texto" name="inf" ngModel required></ion-input>
+          </ion-item>
+        </ion-list>
+        <button ion-button block type="submit" [disabled]="!f.valid" class="botones">Aceptar</button> 
+        
+      </form>
+
+</ion-content>

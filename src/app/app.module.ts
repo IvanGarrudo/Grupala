@@ -1,3 +1,4 @@
+
 import { RegistroPageModule } from './../pages/registro/registro.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -14,12 +15,16 @@ import { Services } from '@angular/core/src/view';
 import { FIREBASE_CONFIG } from '../app/firebase.credentials';
 import {AngularFireModule} from 'angularfire2';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
+
+import { InfoGrupoPage } from '../pages/info-grupo/info-grupo';
 import { ContactService } from '../services/contact.service';
+import { infoService } from './../services/​info.service';
 import { LoginPage } from '../pages/login/login';
 
 @NgModule({
   declarations: [
     MyApp,
+    InfoGrupoPage,
     HomePage,
     ListPage,
     LoginPage
@@ -34,6 +39,7 @@ import { LoginPage } from '../pages/login/login';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    InfoGrupoPage,
     HomePage,
     ListPage,
     RegistroPage,
@@ -42,6 +48,7 @@ import { LoginPage } from '../pages/login/login';
   providers: [
     StatusBar,
     SplashScreen,
+    infoService,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ContactService
   ]

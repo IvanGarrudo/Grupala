@@ -5,7 +5,7 @@ import { Group } from "../models/grupo.model";
 @Injectable()
 export class GroupService{
 
-    private groups: Group [] = [{"ngroup":"Gamers","type":"Videojuegos","foto":"../../assets/img/videogame.png"}];
+    private groups: Group [] = [{"ngroup":"Gamers","type":"Videojuegos","foto":"../../assets/imgs/logo.png"}];
     constructor(){
 
     }

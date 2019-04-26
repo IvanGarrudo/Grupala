@@ -8,6 +8,9 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { RegistroPage } from '../pages/registro/registro';
+import { MisGruposPage } from '../pages/mis-grupos/mis-grupos';
+import { NuevoGrupoPage } from '../pages/nuevo-grupo/nuevo-grupo';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -20,6 +23,8 @@ import { InfoGrupoPage } from '../pages/info-grupo/info-grupo';
 import { ContactService } from '../services/contact.service';
 import { infoService } from './../services/​info.service';
 import { LoginPage } from '../pages/login/login';
+import { GroupService } from '../services/group.service';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +32,9 @@ import { LoginPage } from '../pages/login/login';
     InfoGrupoPage,
     HomePage,
     ListPage,
-    LoginPage
+    LoginPage,
+    MisGruposPage,
+    NuevoGrupoPage
   ],
   imports: [
     BrowserModule,
@@ -43,14 +50,17 @@ import { LoginPage } from '../pages/login/login';
     HomePage,
     ListPage,
     RegistroPage,
-    LoginPage
+    LoginPage,
+    MisGruposPage,
+    NuevoGrupoPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     infoService,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ContactService
+    ContactService,
+    GroupService
   ]
 })
 export class AppModule {}

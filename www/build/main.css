@@ -25823,6 +25823,10 @@ ion-navbar.toolbar {
   border-radius: 5px;
 }
 
+td {
+  padding-right: 10px;
+}
+
 .formulario {
   width: 100%;
 }

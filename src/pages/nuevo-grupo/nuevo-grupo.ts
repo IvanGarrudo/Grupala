@@ -24,7 +24,7 @@ export class NuevoGrupoPage {
   }
 
   onAddGroup(value: {ngroup:string, type:string, foto:string}){
-    value.foto = value.foto.replace("C:\\fakepath\\", "../../assets/img/");
+    value.foto = value.foto.replace("C:\\fakepath\\", "../../assets/imgs/");
     this.groupService.addGroup(value);
     this.navCtrl.pop();
   }

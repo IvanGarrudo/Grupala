@@ -17,24 +17,27 @@
           <ion-item class="elemento" >
             <ion-label >Nuevo nombre del Grupo</ion-label>
           </ion-item>
-          <ion-item class="conBorde">
-            <ion-input type="text" placeholder="Texto" name="nombre" ngModel required></ion-input>
+          <ion-item style="border-radius: 8%" class="conBorde">
+            <ion-input  type="text" placeholder="Texto" name="nombre" ngModel required></ion-input>
           </ion-item>
           <ion-item class="elemento">
             <ion-label>Nueva descipción del Grupo</ion-label>
           </ion-item>
-          <ion-item class="conBorde">
-            <ion-input type="text" placeholder="Texto" name="inf" ngModel required></ion-input>
+          <ion-item style="border-radius: 8%"  class="conBorde">
+            <ion-input  type="text" placeholder="Texto" name="inf" ngModel required></ion-input>
           </ion-item>
         </ion-list>
         <button ion-button block type="submit" [disabled]="!f.valid" class="botones">Aceptar</button> 
         
       </form>
-      <ion-toolbar>
-        <button ion-button  class="botoncito"  >Noticias</button>
-        <button ion-button    class="botoncito" >Foro</button>
-        <button ion-button   class="botoncito" >Eventos</button>
-        <button ion-button    class="botoncito" >Admin</button>
-        <button ion-button     class="botoncito" >Amigos</button>
-    </ion-toolbar>
+
 </ion-content>
+<ion-footer>
+  <ion-toolbar>
+      <button ion-button  class="botoncito"  >Noticias</button>
+      <button ion-button    class="botoncito" >Foro</button>
+      <button ion-button   class="botoncito" >Eventos</button>
+      <button ion-button    class="botoncito" >Admin</button>
+      <button ion-button     class="botoncito" >Amigos</button>
+  </ion-toolbar>
+</ion-footer>

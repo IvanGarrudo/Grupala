@@ -6,8 +6,8 @@ export class infoService{
 	private nombre:string;
 	private info:string;
 	constructor(){
-		this.nombre="fgssadf";
-		this.info="sagdfasd";
+		this.nombre="Rol Leganes";
+		this.info="Grupo de rol de la universidad UC3M Leganes";
     }
 
 	

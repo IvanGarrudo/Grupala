@@ -1,8 +1,10 @@
+import { BusquedaPage } from './../busqueda/busqueda';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Login } from "../../models/contact.model";
 import { AngularFireDatabase } from 'angularfire2/database';
 import { MisGruposPage } from '../mis-grupos/mis-grupos';
+
 
 @Component({
   selector: 'page-home',
@@ -19,8 +21,10 @@ export class HomePage {
     return this.contactsRef.push(value);
   }
 
-  goToSignup(){
-    this.navCtrl.push(MisGruposPage);
+  goToBus(){
+    
+    this.navCtrl.setRoot(BusquedaPage);
+    
   }
 
 }

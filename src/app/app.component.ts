@@ -10,6 +10,7 @@ import { LoginPage } from '../pages/login/login';
 import { InfoGrupoPage } from '../pages/info-grupo/info-grupo';
 import { MisGruposPage } from '../pages/mis-grupos/mis-grupos';
 import { GrupoPage } from '../pages/grupo/grupo';
+import { BusquedaPage } from './../pages/busqueda/busqueda';
 
 
 @Component({
@@ -18,7 +19,7 @@ import { GrupoPage } from '../pages/grupo/grupo';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = InfoGrupoPage;
+  rootPage: any = HomePage;
 
   pages: Array<{title: string, component: any}>;
 

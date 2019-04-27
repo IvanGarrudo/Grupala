@@ -31,11 +31,11 @@ export class GrupoPage {
   }
 
   goToForo(){
-    this.navCtrl.push(ForoPage);
+    this.navCtrl.setRoot(ForoPage);
   }
 
   goToLista(){
-    this.navCtrl.push(ListPage);
+    this.navCtrl.setRoot(ListPage);
   }
 
 }

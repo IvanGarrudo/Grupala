@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { HilosPage } from '../hilos/hilos';
 
 /**
  * Generated class for the ForoPage page.
@@ -20,6 +21,10 @@ export class ForoPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ForoPage');
+  }
+
+  alhilo(){
+    this.navCtrl.push(HilosPage);
   }
 
 }

@@ -25709,6 +25709,10 @@ ion-navbar.toolbar {
   font-size: 9pt;
 }
 
+.titulo {
+  color: #79848d;
+}
+
 .buscador {
   width: 100%;
 }

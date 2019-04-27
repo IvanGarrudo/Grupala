@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Noticia } from '../../models/noticia.model'
+import { NoticiaService } from '../../services/noticia.service';
 
 /**
  * Generated class for the GrupoPage page.
@@ -15,7 +17,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class GrupoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  noticias: Noticia[]=[];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private contactService: NoticiaService) {
+    this.noticias = this.contactService.get();
   }
 
   ionViewDidLoad() {

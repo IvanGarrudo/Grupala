@@ -1,4 +1,4 @@
-
+import { NoticiaService } from './../services/noticia.service';
 import { RegistroPageModule } from './../pages/registro/registro.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -10,6 +10,7 @@ import { ListPage } from '../pages/list/list';
 import { RegistroPage } from '../pages/registro/registro';
 import { MisGruposPage } from '../pages/mis-grupos/mis-grupos';
 import { NuevoGrupoPage } from '../pages/nuevo-grupo/nuevo-grupo';
+import { GrupoPage } from '../pages/grupo/grupo';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -34,7 +35,8 @@ import { GroupService } from '../services/group.service';
     ListPage,
     LoginPage,
     MisGruposPage,
-    NuevoGrupoPage
+    NuevoGrupoPage,
+    GrupoPage
   ],
   imports: [
     BrowserModule,
@@ -52,7 +54,8 @@ import { GroupService } from '../services/group.service';
     RegistroPage,
     LoginPage,
     MisGruposPage,
-    NuevoGrupoPage
+    NuevoGrupoPage,
+    GrupoPage
   ],
   providers: [
     StatusBar,
@@ -60,6 +63,7 @@ import { GroupService } from '../services/group.service';
     infoService,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ContactService,
+    NoticiaService,
     GroupService
   ]
 })

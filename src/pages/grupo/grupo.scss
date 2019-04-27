@@ -1,10 +1,4 @@
-$colors:(
-    primary: #488aff ,
-    secondary: #738598 ,
-    danger: #f53d3d ,
-    light:  #79848d,
-    dark: #232931 ,
-);
+
 .botoncito{
    width: 17.6%;
    font-size: 8pt;
@@ -13,6 +7,7 @@ $colors:(
 .imagen{
     width:10%;
     float: left;
+    height: 10%;
 }
 .mensaje{
     width:90%;
@@ -20,5 +15,9 @@ $colors:(
     font-size: 9pt;
 }
 .titulo{
+    color: #79848d;
+    text-align: center;
+}
+.titulo1{
     color: #79848d;
 }

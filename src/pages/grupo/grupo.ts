@@ -1,7 +1,10 @@
+import { ForoPage } from './../foro/foro';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Noticia } from '../../models/noticia.model'
 import { NoticiaService } from '../../services/noticia.service';
+import { ListPage } from '../list/list';
+
 
 /**
  * Generated class for the GrupoPage page.
@@ -25,6 +28,14 @@ export class GrupoPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad GrupoPage');
+  }
+
+  goToForo(){
+    this.navCtrl.push(ForoPage);
+  }
+
+  goToLista(){
+    this.navCtrl.push(ListPage);
   }
 
 }

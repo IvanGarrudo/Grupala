@@ -18,7 +18,7 @@ import { GrupoPage } from '../pages/grupo/grupo';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = GrupoPage;
+  rootPage: any = InfoGrupoPage;
 
   pages: Array<{title: string, component: any}>;
 

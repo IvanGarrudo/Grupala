@@ -25713,6 +25713,26 @@ ion-navbar.toolbar {
   color: #79848d;
 }
 
+.perfil_hilo {
+  width: 20%;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.comentario {
+  width: 68%;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.hilo {
+  text-align: center;
+}
+
+.img_perfil {
+  height: 100%;
+}
+
 .buscador {
   width: 100%;
 }

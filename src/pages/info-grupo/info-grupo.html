@@ -15,17 +15,21 @@
         <ion-item text-wrap class="elemento">En caso de querer modificar el grupo rellene los siguientes campos.</ion-item>
         <ion-list>
           <ion-item class="elemento" >
-            <ion-label >Nuevo nombre del Grupo</ion-label>
+            <ion-label >Nuevo nombre del grupo</ion-label>
           </ion-item>
           <ion-item style="border-radius: 8%" class="conBorde">
-            <ion-input  type="text" placeholder="Texto" name="nombre" ngModel required></ion-input>
+            <ion-input  type="text" placeholder="" name="ngroup" ngModel ></ion-input>
           </ion-item>
           <ion-item class="elemento">
-            <ion-label>Nueva descipción del Grupo</ion-label>
+            <ion-label>Nuevo tipo de grupo</ion-label>
           </ion-item>
           <ion-item style="border-radius: 8%"  class="conBorde">
-            <ion-input  type="text" placeholder="Texto" name="inf" ngModel required></ion-input>
+            <ion-input  type="text" placeholder="" name="type" ngModel ></ion-input>
           </ion-item>
+          <ion-item>
+            <ion-label class="elemento">Imagen</ion-label>
+            <ion-input type="file" name="foto" ngModel ></ion-input>
+           </ion-item>
         </ion-list>
         <button ion-button block type="submit" [disabled]="!f.valid" class="botones">Aceptar</button> 
         

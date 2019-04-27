@@ -18,8 +18,14 @@ export class GroupService{
         this.groups.push(value);
     }
 
-    updateGroup(value: Group){
-
+    updateGroup(value: Group){  
+        if(value.ngroup!=""){
+            this.groups[0].ngroup=value.ngroup;
+        }if(value.type!=""){
+            this.groups[0].type=value.type;
+        }if(value.foto!=""){
+            this.groups[0].foto=value.foto;
+        }
     }
 
     removeGroup(value: Group){

@@ -1,8 +1,7 @@
-import { infoService } from './../../services/​info.service';
+import { GroupService } from './../../services/group.service';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ContactService } from '../../services/contact.service';
-import { info } from '../../models/contact.model';
+import { Group } from '../../models/grupo.model';
 import { HomePage } from '../home/home';
 
 /**
@@ -18,15 +17,14 @@ import { HomePage } from '../home/home';
   templateUrl: 'info-grupo.html',
 })
 export class InfoGrupoPage {
-  private inf:info;
-  constructor(public navCtrl: NavController, public navParams: NavParams, private InfoService :infoService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private InfoService :GroupService) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad InfoGrupoPage');
   }
-  update(value:info){
-    this.InfoService.updateContact(value);
+  update(value:Group){
+    this.InfoService.updateGroup(value);
     this.navCtrl.setRoot(HomePage);
     this.navCtrl.goToRoot;
   }

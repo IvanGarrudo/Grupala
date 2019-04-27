@@ -22,7 +22,6 @@ import {AngularFireDatabaseModule} from 'angularfire2/database';
 
 import { InfoGrupoPage } from '../pages/info-grupo/info-grupo';
 import { ContactService } from '../services/contact.service';
-import { infoService } from './../services/​info.service';
 import { LoginPage } from '../pages/login/login';
 import { GroupService } from '../services/group.service';
 
@@ -60,7 +59,6 @@ import { GroupService } from '../services/group.service';
   providers: [
     StatusBar,
     SplashScreen,
-    infoService,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ContactService,
     NoticiaService,

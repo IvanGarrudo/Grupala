@@ -13,26 +13,23 @@
 <ion-content padding>
     <h3 class="titulo">Manuales</h3>
 
-    <ion-list class="manuales">
+    <ion-list *ngFor = "let mensajes of listam" class="manuales">
       <ion-card class="hilo">
         <ion-card-content>
-          <div class="perfil_hilo"><img src="../assets/imgs/user3.png" class="img_perfil"/></div>
-          <div class="comentario">Considero que no tienes razón 5º es mejor</div>
+          <div class="perfil_hilo"><img src={{mensajes.icono}} class="img_perfil"/></div>
+          <div class="comentario">{{mensajes.mensaje}}</div>
         </ion-card-content>        
       </ion-card>
-      <ion-card class="hilo">
-          <div class="perfil_hilo"><img src="../assets/imgs/user2.png" class="img_perfil"/></div>
-          <div class="comentario">3.5 es lo unico de D&D que se debería considerar rol</div>
-      </ion-card>
-      <ion-card class="hilo">
-          <div class="perfil_hilo"><img src="../assets/imgs/user1.png" class="img_perfil"/></div>
-          <div class="comentario">Creo que todas las versiones tienen su público, aunque me inclino más por la primera versión, qué opninan ustedes?</div>
-        </ion-card>
     </ion-list>
-    <ion-list>
-      <textarea ng-model="string"></textarea>
-      <button ion-button>Mandar</button>
-    </ion-list>
+    
+    
     
 
 </ion-content>
+
+<ion-footer>
+    <form (ngSubmit)="add(f.value)" #f="ngForm">
+        <textarea ng-model="string"  type="text" placeholder="Nuevo mensaje" name="mensaje" ngModel style="width:100%;"></textarea>
+        <button ion-button block type="submit" [disabled]="!f.valid">Mandar</button>
+      </form>
+</ion-footer>

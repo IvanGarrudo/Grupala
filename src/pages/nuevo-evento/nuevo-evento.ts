@@ -23,7 +23,8 @@ export class NuevoEventoPage {
     console.log('ionViewDidLoad NuevoEventoPage');
   }
 
-  onAddEvent(value: {nevent:string, desc:string, icon:string}){
+  onAddEvent(value: {nevent:string, desc:string, icon:string, user}){
+    value.user=[];
     value.icon = value.icon.replace("C:\\fakepath\\", "../../assets/imgs/");
     this.eventService.addGroup(value);
     this.navCtrl.pop();

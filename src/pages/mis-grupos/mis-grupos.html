@@ -17,7 +17,7 @@
 
 
   <ion-list>
-    <button (click)="goToNoticias()" ion-item *ngFor="let group of groups">
+    <ion-item  (click)="goToNoticias()" *ngFor="let group of groups">
       <tr>
         <td>
             <ion-avatar><img [src]="group.foto"></ion-avatar>

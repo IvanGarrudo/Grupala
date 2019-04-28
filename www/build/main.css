@@ -25891,13 +25891,13 @@ ion-searchbar .searchbar-input-container .searchbar-input {
 }
 
 .elemento {
+  background: #232931;
+  color: #738598;
   width: 80%;
-  margin: 0 auto;
+  text-align: center;
 }
 
 .conBorde {
-  margin: 0 auto;
-  border: 1px solid black;
   width: 80%;
 }
 

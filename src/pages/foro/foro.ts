@@ -2,12 +2,12 @@ import { CrearForoPage } from './../crear-foro/crear-foro';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HilosPage } from '../hilos/hilos';
-
 import { ListPage } from '../list/list';
 import { InfoGrupoPage } from '../info-grupo/info-grupo';
 import { GrupoPage } from '../grupo/grupo';
 import { Post } from '../../models/post.model';
 import { PostService } from '../../services/post.service';
+import { MisEventosPage } from '../mis-eventos/mis-eventos';
 
 
 /**

@@ -25,7 +25,7 @@ import firebase from "firebase";
 })
 export class LoginPage {
   contacts:PromiseLike<Login[]>;
-  
+  private aaa="as";
   constructor(public navCtrl: NavController, public navParams: NavParams, private ContactService : ContactService) {
   }
 
@@ -33,20 +33,17 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
 
-  comprobar(a: Login){
+  async comprobar(a: Login){
     //let miembros = [];
-    
-    var c = firebase.database().ref('/Logins/'+a.nusuario).once('value').then(function(snapshot){
-      var username = (snapshot.val() && snapshot.val().contra )
-      if(a.cusuario == username){
-        this.navCtrl.setRoot(HomePage);
-        this.navCtrl.goToRoot;
-      }else{
-        this.navCtrl.setRoot(RegistroPage);
-        this.navCtrl.goToRoot;
-      }
-
+    var c= firebase.database().ref('/Logins/'+a.nusuario).once('value').then(function(snapshot){
+      var username :string = (snapshot.val() && snapshot.val().contra );
+      return a.cusuario == username;    
     });
+    if (await c){
+      this.navCtrl.setRoot(HomePage);
+    }else{
+      alert("Usuario o contraseña no validos");
+    }
     
     /*this.ContactService.getContacts().then(this.contacts){
       var sesion = false;
@@ -59,7 +56,12 @@ export class LoginPage {
       }      
     } */   
   }   
- 
+  a(a:Login){
+    return firebase.database().ref('/Logins/'+a.nusuario).once('value').then(function(snapshot){
+      var username :string = (snapshot.val() && snapshot.val().contra );
+      return a.cusuario == username;    
+    });
+  }
   goToSignup(){
     this.navCtrl.push(RegistroPage);
     

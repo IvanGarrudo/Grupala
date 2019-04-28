@@ -20,7 +20,7 @@ import { BusquedaPage } from './../pages/busqueda/busqueda';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = ListPage;
+  rootPage: any = LoginPage;
 
   pages: Array<{title: string, component: any}>;
 

@@ -10,15 +10,15 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3 class="titulo">Foros de D&D</h3>
+<ion-content padding style="background: #232931">
+  <h3 class="titulo" color="light">Foros de D&D</h3>
 
   <ion-list *ngFor = "let post of posts" class="Foros_dd">
-    <ion-card class="los_hilos" (click)="alhilo()">
+    <ion-card class="los_hilos" (click)="alhilo()" color="secondary">
       <ion-card-header>
-        <ion-card-title class="titulos">{{post.titulo}}</ion-card-title>
+        <ion-card-title class="titulos" style="color:white">{{post.titulo}}</ion-card-title>
       </ion-card-header>
-      <ion-card-content>
+      <ion-card-content style="color:white">
         {{post.desc}}
       </ion-card-content>
     </ion-card>

@@ -13,12 +13,12 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding >
+<ion-content padding style="background: #232931">
   <h3 class="titulo">D&D</h3>
   <h4 class="titulo1">Noticias</h4>
 
-  <ion-list *ngFor = "let noticia of noticias" color="dark">
-    <ion-card >
+  <ion-list *ngFor = "let noticia of noticias" >
+    <ion-card color="secondary" >
       <ion-card-content>
           <div class="imagen">
             <ion-icon name={{noticia.icono}}></ion-icon>

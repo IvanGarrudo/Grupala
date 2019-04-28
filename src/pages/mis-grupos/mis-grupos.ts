@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Group } from '../../models/grupo.model';
 import { GroupService } from '../../services/group.service';
 import { NuevoGrupoPage } from '../nuevo-grupo/nuevo-grupo';
+import { MisEventosPage } from '../mis-eventos/mis-eventos';
 
 
 @IonicPage()
@@ -34,6 +35,10 @@ export class MisGruposPage {
 
   onLoadGroupPage(){
     this.navCtrl.push(NuevoGrupoPage);
+  }
+
+  eventosPage(){
+    this.navCtrl.push(MisEventosPage);
   }
 
   setFilteredItems(){

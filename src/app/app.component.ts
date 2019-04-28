@@ -31,7 +31,6 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'Mis Grupos', component: MisGruposPage },
-      { title: 'Mis Eventos', component: MisEventosPage },
       { title: 'Cerrar sesion', component: LoginPage }
     ];
 

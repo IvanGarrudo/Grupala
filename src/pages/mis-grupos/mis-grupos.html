@@ -17,7 +17,7 @@
 
 
   <ion-list>
-    <button ion-item *ngFor="let group of groups">
+    <ion-item *ngFor="let group of groups">
       <tr>
         <td>
             <ion-avatar><img [src]="group.foto"></ion-avatar>
@@ -25,9 +25,10 @@
         <td>
           <h2>{{group.ngroup}}</h2>
           <h3>{{group.type}}</h3>
+          <button ion-button clear (click)="eventosPage()">eventos</button>
         </td>
       </tr>
-    </button>
+    </ion-item>
   </ion-list>
   <button ion-button full color="secondary" (click)="onLoadGroupPage()">Nuevo grupo</button>
 </ion-content>

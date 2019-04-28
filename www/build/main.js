@@ -1,6 +1,6 @@
 webpackJsonp([10],{
 
-/***/ 114:
+/***/ 115:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17,76 +17,6 @@ var Noticia = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 115:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase__ = __webpack_require__(231);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_firebase__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var ContactService = /** @class */ (function () {
-    function ContactService(db) {
-        this.db = db;
-        this.contactsRef = this.db.list('Logins');
-    }
-    ContactService.prototype.addMember = function (value) {
-        __WEBPACK_IMPORTED_MODULE_2_firebase___default.a.database().ref('Logins/' + value.nusuario).set({
-            mail: value.eusuario,
-            contra: value.cusuario
-        });
-        // this.contacts.push(value);
-        //return this.contactsRef.push(value);
-    };
-    ContactService.prototype.getu = function () {
-        return this.susuario;
-    };
-    ContactService.prototype.pushu = function (a) {
-        this.susuario = a;
-    };
-    ContactService.prototype.getContacts = function (a) {
-        var uno = false;
-        var c = __WEBPACK_IMPORTED_MODULE_2_firebase___default.a.database().ref('/Logins/' + a.nusuario).once('value').then(function (snapshot) {
-            var username = (snapshot.val() && snapshot.val().contra);
-            return username == a.cusuario;
-            /*if(username == a.cusuario){
-                uno = true;
-                return uno;
-            }
-            if(username != a.cusuario){
-                uno = false;
-                return uno;
-            }*/
-        });
-        /*var path = "/Logins/"+a.nusuario+"/contra";
-        var c = firebase.database().ref(path).once('value');
-        alert(c);*/
-        //const l = db.ref('/Logins/');
-    };
-    ContactService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["a" /* AngularFireDatabase */]])
-    ], ContactService);
-    return ContactService;
-}());
-
-//# sourceMappingURL=contact.service.js.map
-
-/***/ }),
-
 /***/ 132:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -94,8 +24,8 @@ var ContactService = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegistroPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_contact_service__ = __webpack_require__(115);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_contact_service__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(84);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -141,7 +71,7 @@ var RegistroPage = /** @class */ (function () {
     };
     RegistroPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-registro',template:/*ion-inline-start:"C:\Users\User\Desktop\Nueva carpeta\Grupala\src\pages\registro\registro.html"*/'<!--\n\n  Generated template for the RegistroPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle end>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Grupala - Registro</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <form (ngSubmit)="onAddMember(f.value)" #f="ngForm" class="formulario">\n\n    <ion-item text-wrap class="elemento">Para poder acceder a todas las posiblidades de nuestra app es necesario registrarse, no le llevará más de un minuto.</ion-item>\n\n    <ion-list>\n\n      <ion-item class="elemento" >\n\n        <ion-label >Nombre de usuario</ion-label>\n\n      </ion-item>\n\n      <ion-item class="conBorde">\n\n        <ion-input type="text" placeholder="Texto" name="nusuario" ngModel required></ion-input>\n\n      </ion-item>\n\n      <ion-item class="elemento">\n\n        <ion-label>Contraseña</ion-label>\n\n      </ion-item>\n\n      <ion-item class="conBorde">\n\n        <ion-input type="Password" placeholder="Texto" name="cusuario" ngModel required></ion-input>\n\n      </ion-item>\n\n      <ion-item class="elemento">\n\n        <ion-label>E-mail</ion-label>\n\n      </ion-item>\n\n      <ion-item class="conBorde">\n\n        <ion-input type="text" placeholder="name@example.com" name="eusuario" ngModel required></ion-input>\n\n      </ion-item>\n\n      <ion-item class="elemento">\n\n          <ion-checkbox ngModel required name="aceptaCondiciones"></ion-checkbox><ion-label text-wrap>He leído y acepto las condiciones de uso</ion-label>\n\n        </ion-item>\n\n    </ion-list>\n\n    <ion-list class="botonera">\n\n      <button ion-button block type="submit" [disabled]="!f.valid" class="botones">Aceptar</button> \n\n      <button ion-back-button class="botones" id="boton_cancelar">CANCELAR</button>\n\n    </ion-list>\n\n  </form>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\User\Desktop\Nueva carpeta\Grupala\src\pages\registro\registro.html"*/,
+            selector: 'page-registro',template:/*ion-inline-start:"C:\Users\enriq\Documents\GitHub\Grupala\src\pages\registro\registro.html"*/'<!--\n\n  Generated template for the RegistroPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle end>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Grupala - Registro</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <form (ngSubmit)="onAddMember(f.value)" #f="ngForm" class="formulario">\n\n    <ion-item text-wrap class="elemento">Para poder acceder a todas las posiblidades de nuestra app es necesario registrarse, no le llevará más de un minuto.</ion-item>\n\n    <ion-list>\n\n      <ion-item class="elemento" >\n\n        <ion-label >Nombre de usuario</ion-label>\n\n      </ion-item>\n\n      <ion-item class="conBorde">\n\n        <ion-input type="text" placeholder="Texto" name="nusuario" ngModel required></ion-input>\n\n      </ion-item>\n\n      <ion-item class="elemento">\n\n        <ion-label>Contraseña</ion-label>\n\n      </ion-item>\n\n      <ion-item class="conBorde">\n\n        <ion-input type="Password" placeholder="Texto" name="cusuario" ngModel required></ion-input>\n\n      </ion-item>\n\n      <ion-item class="elemento">\n\n        <ion-label>E-mail</ion-label>\n\n      </ion-item>\n\n      <ion-item class="conBorde">\n\n        <ion-input type="text" placeholder="name@example.com" name="eusuario" ngModel required></ion-input>\n\n      </ion-item>\n\n      <ion-item class="elemento">\n\n          <ion-checkbox ngModel required name="aceptaCondiciones"></ion-checkbox><ion-label text-wrap>He leído y acepto las condiciones de uso</ion-label>\n\n        </ion-item>\n\n    </ion-list>\n\n    <ion-list class="botonera">\n\n      <button ion-button block type="submit" [disabled]="!f.valid" class="botones">Aceptar</button> \n\n      <button ion-back-button class="botones" id="boton_cancelar">CANCELAR</button>\n\n    </ion-list>\n\n  </form>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\enriq\Documents\GitHub\Grupala\src\pages\registro\registro.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__services_contact_service__["a" /* ContactService */]])
     ], RegistroPage);
@@ -208,7 +138,7 @@ var EventService = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_group_service__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__nuevo_grupo_nuevo_grupo__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__nuevo_grupo_nuevo_grupo__ = __webpack_require__(89);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -259,7 +189,7 @@ var BusquedaPage = /** @class */ (function () {
     };
     BusquedaPage = BusquedaPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-            selector: 'page-busqueda',template:/*ion-inline-start:"C:\Users\User\Desktop\Nueva carpeta\Grupala\src\pages\busqueda\busqueda.html"*/'<!--\n\n  Generated template for the BusquedaPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n    \n\n  <ion-navbar >\n\n    <ion-title>Grupala</ion-title>\n\n    <button ion-button menuToggle end>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n \n\n  \n\n    \n\n    <ion-navbar class="buscador" >\n\n        <ion-searchbar animated [(ngModel)]="searchTerm" (ionChange)="setFilteredItems()" class="entrada"></ion-searchbar>\n\n        <button ion-button solid  (click)="goToSame()" class="boton" >Buscar</button>\n\n      </ion-navbar>\n\n    \n\n\n\n  <ion-list>\n\n    <button ion-item *ngFor="let group of groups" (click)="goToGrupo()">\n\n      <tr >\n\n        <td>\n\n            <ion-avatar><img [src]="group.foto"></ion-avatar>\n\n        </td>\n\n        <td>\n\n          <h2>{{group.ngroup}}</h2>\n\n          <h3>{{group.type}}</h3>\n\n        </td>\n\n      </tr>\n\n    </button>\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\User\Desktop\Nueva carpeta\Grupala\src\pages\busqueda\busqueda.html"*/,
+            selector: 'page-busqueda',template:/*ion-inline-start:"C:\Users\enriq\Documents\GitHub\Grupala\src\pages\busqueda\busqueda.html"*/'<!--\n\n  Generated template for the BusquedaPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n    \n\n  <ion-navbar >\n\n    <ion-title>Grupala</ion-title>\n\n    <button ion-button menuToggle end>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n \n\n  \n\n    \n\n    <ion-navbar class="buscador" >\n\n        <ion-searchbar animated [(ngModel)]="searchTerm" (ionChange)="setFilteredItems()" class="entrada"></ion-searchbar>\n\n        <button ion-button solid  (click)="goToSame()" class="boton" >Buscar</button>\n\n      </ion-navbar>\n\n    \n\n\n\n  <ion-list>\n\n    <button ion-item *ngFor="let group of groups" (click)="goToGrupo()">\n\n      <tr >\n\n        <td>\n\n            <ion-avatar><img [src]="group.foto"></ion-avatar>\n\n        </td>\n\n        <td>\n\n          <h2>{{group.ngroup}}</h2>\n\n          <h3>{{group.type}}</h3>\n\n        </td>\n\n      </tr>\n\n    </button>\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\enriq\Documents\GitHub\Grupala\src\pages\busqueda\busqueda.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__services_group_service__["a" /* GroupService */]])
     ], BusquedaPage);
@@ -279,7 +209,7 @@ var BusquedaPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__mensajes__ = __webpack_require__(330);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_noticia_model__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_noticia_model__ = __webpack_require__(115);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_noticia_service__ = __webpack_require__(72);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -317,7 +247,7 @@ var HilosPage = /** @class */ (function () {
     };
     HilosPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-            selector: 'page-hilos',template:/*ion-inline-start:"C:\Users\User\Desktop\Nueva carpeta\Grupala\src\pages\hilos\hilos.html"*/'<!--\n\n  Generated template for the HilosPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>hilos</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding style="background: #232931">\n\n    <h3 class="titulo">Manuales</h3>\n\n\n\n    <ion-list *ngFor = "let mensajes of listam" class="manuales">\n\n      <ion-card class="hilo" color="secondary">\n\n        <ion-card-content>\n\n          <div class="perfil_hilo"><img src={{mensajes.icono}} class="img_perfil"/></div>\n\n          <div class="comentario">{{mensajes.mensaje}}</div>\n\n        </ion-card-content>        \n\n      </ion-card>\n\n    </ion-list>\n\n    \n\n    \n\n    \n\n\n\n</ion-content>\n\n\n\n<ion-footer>\n\n    <form (ngSubmit)="add(f.value)" #f="ngForm">\n\n        <textarea ng-model="string"  type="text" placeholder="Nuevo mensaje" name="mensaje" ngModel style="width:100%;"></textarea>\n\n        <button ion-button block type="submit" [disabled]="!f.valid">Mandar</button>\n\n      </form>\n\n</ion-footer>\n\n'/*ion-inline-end:"C:\Users\User\Desktop\Nueva carpeta\Grupala\src\pages\hilos\hilos.html"*/,
+            selector: 'page-hilos',template:/*ion-inline-start:"C:\Users\enriq\Documents\GitHub\Grupala\src\pages\hilos\hilos.html"*/'<!--\n\n  Generated template for the HilosPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>hilos</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding style="background: #232931">\n\n    <h3 class="titulo">Manuales</h3>\n\n\n\n    <ion-list *ngFor = "let mensajes of listam" class="manuales">\n\n      <ion-card class="hilo" color="secondary">\n\n        <ion-card-content>\n\n          <div class="perfil_hilo"><img src={{mensajes.icono}} class="img_perfil"/></div>\n\n          <div class="comentario">{{mensajes.mensaje}}</div>\n\n        </ion-card-content>        \n\n      </ion-card>\n\n    </ion-list>\n\n    \n\n    \n\n    \n\n\n\n</ion-content>\n\n\n\n<ion-footer>\n\n    <form (ngSubmit)="add(f.value)" #f="ngForm">\n\n        <textarea ng-model="string"  type="text" placeholder="Nuevo mensaje" name="mensaje" ngModel style="width:100%;"></textarea>\n\n        <button ion-button block type="submit" [disabled]="!f.valid">Mandar</button>\n\n      </form>\n\n</ion-footer>\n\n'/*ion-inline-end:"C:\Users\enriq\Documents\GitHub\Grupala\src\pages\hilos\hilos.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__services_noticia_service__["a" /* NoticiaService */]])
     ], HilosPage);
@@ -335,9 +265,9 @@ var HilosPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_contact_service__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_contact_service__ = __webpack_require__(74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__registro_registro__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home__ = __webpack_require__(84);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_firebase__ = __webpack_require__(231);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_firebase__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -441,7 +371,7 @@ var LoginPage = /** @class */ (function () {
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"C:\Users\User\Desktop\Nueva carpeta\Grupala\src\pages\login\login.html"*/'<!--\n\n  Generated template for the LoginPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle end>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Grupala</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding style="background: #232931">\n\n  <h3 class="elemento">Inicio de Sesion</h3>\n\n  <form (ngSubmit)="comprobar(f.value)" #f="ngForm" class="formulario">\n\n   \n\n    <ion-list style="background: #232931">\n\n      <div class="elemento">\n\n        <ion-label>Nombre usuario</ion-label>\n\n      </div>\n\n      <ion-item >\n\n        <ion-input type="text" placeholder="pepito22" name="nusuario" ngModel required></ion-input>\n\n      </ion-item>\n\n      <div class="elemento">\n\n        <ion-label>Contraseña</ion-label>\n\n      </div>\n\n      <ion-item >\n\n        <ion-input type="Password" placeholder="*******" name="cusuario" ngModel required></ion-input>\n\n      </ion-item>\n\n    </ion-list>\n\n    <ion-list class="botonera">\n\n      <button ion-button block type="submit" [disabled]="!f.valid" >Aceptar</button> \n\n    </ion-list>\n\n  </form>\n\n  <ion-list class="botonera">\n\n  <button ion-button block  id="boton_registro" (click)="goToSignup()" >¿No tines cuenta?</button>\n\n </ion-list>\n\n  \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\User\Desktop\Nueva carpeta\Grupala\src\pages\login\login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"C:\Users\enriq\Documents\GitHub\Grupala\src\pages\login\login.html"*/'<!--\n\n  Generated template for the LoginPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle end>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Grupala</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding style="background: #232931">\n\n  <h3 class="elemento">Inicio de Sesion</h3>\n\n  <form (ngSubmit)="comprobar(f.value)" #f="ngForm" class="formulario">\n\n   \n\n    <ion-list style="background: #232931">\n\n      <div class="elemento">\n\n        <ion-label>Nombre usuario</ion-label>\n\n      </div>\n\n      <ion-item >\n\n        <ion-input type="text" placeholder="pepito22" name="nusuario" ngModel required></ion-input>\n\n      </ion-item>\n\n      <div class="elemento">\n\n        <ion-label>Contraseña</ion-label>\n\n      </div>\n\n      <ion-item >\n\n        <ion-input type="Password" placeholder="*******" name="cusuario" ngModel required></ion-input>\n\n      </ion-item>\n\n    </ion-list>\n\n    <ion-list class="botonera">\n\n      <button ion-button block type="submit" [disabled]="!f.valid" >Aceptar</button> \n\n    </ion-list>\n\n  </form>\n\n  <ion-list class="botonera">\n\n  <button ion-button block  id="boton_registro" (click)="goToSignup()" >¿No tines cuenta?</button>\n\n </ion-list>\n\n  \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\enriq\Documents\GitHub\Grupala\src\pages\login\login.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__services_contact_service__["a" /* ContactService */]])
     ], LoginPage);
@@ -457,7 +387,7 @@ var LoginPage = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MisEventosPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services_contact_service__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services_contact_service__ = __webpack_require__(74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_event_service__ = __webpack_require__(133);
@@ -510,12 +440,11 @@ var MisEventosPage = /** @class */ (function () {
     };
     MisEventosPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-            selector: 'page-mis-eventos',template:/*ion-inline-start:"C:\Users\User\Desktop\Nueva carpeta\Grupala\src\pages\mis-eventos\mis-eventos.html"*/'<!--\n\n  Generated template for the MisEventosPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>MisEventos</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-searchbar animated [(ngModel)]="searchTerm" (ionChange)="setFilteredItems()"></ion-searchbar>\n\n\n\n\n\n  <ion-list>\n\n    <button  (click)="unir()" ion-item *ngFor="let event of events">\n\n      <tr>\n\n        <td>\n\n            <ion-avatar><img [src]="event.icon"></ion-avatar>\n\n        </td>\n\n        <td>\n\n          <h2>{{event.nevent}}</h2>\n\n          <h3>{{event.desc}}</h3>\n\n          <h3>Participantes<br>{{user}}</h3>\n\n         \n\n        </td>\n\n        \n\n        \n\n      </tr>\n\n    </button>\n\n  </ion-list>\n\n  <button ion-button full color="secondary" (click)="onLoadEventPage()">Nuevo evento</button>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\User\Desktop\Nueva carpeta\Grupala\src\pages\mis-eventos\mis-eventos.html"*/,
+            selector: 'page-mis-eventos',template:/*ion-inline-start:"C:\Users\enriq\Documents\GitHub\Grupala\src\pages\mis-eventos\mis-eventos.html"*/'<!--\n\n  Generated template for the MisEventosPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>MisEventos</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-searchbar animated [(ngModel)]="searchTerm" (ionChange)="setFilteredItems()"></ion-searchbar>\n\n\n\n\n\n  <ion-list>\n\n    <button ion-item (click)="unir()" *ngFor="let event of events">\n\n      <tr>\n\n        <td>\n\n            <ion-avatar><img [src]="event.icon"></ion-avatar>\n\n        </td>\n\n        <td>\n\n          <h2>{{event.nevent}}</h2>\n\n          <h3>{{event.desc}}</h3>\n\n          <h3>Participantes<br>{{user}}</h3>\n\n        </td>\n\n        \n\n        \n\n      </tr>\n\n    </button>\n\n  </ion-list>\n\n  <button ion-button full color="secondary" (click)="onLoadEventPage()">Nuevo evento</button>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\enriq\Documents\GitHub\Grupala\src\pages\mis-eventos\mis-eventos.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_event_service__["a" /* EventService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_event_service__["a" /* EventService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__services_contact_service__["a" /* ContactService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__services_contact_service__["a" /* ContactService */]) === "function" && _d || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__services_event_service__["a" /* EventService */], __WEBPACK_IMPORTED_MODULE_0__services_contact_service__["a" /* ContactService */]])
     ], MisEventosPage);
     return MisEventosPage;
-    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=mis-eventos.js.map
@@ -564,7 +493,7 @@ var NuevoEventoPage = /** @class */ (function () {
     };
     NuevoEventoPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-nuevo-evento',template:/*ion-inline-start:"C:\Users\User\Desktop\Nueva carpeta\Grupala\src\pages\nuevo-evento\nuevo-evento.html"*/'<!--\n\n  Generated template for the NuevoEventoPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Crear evento</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n    <form (ngSubmit)="onAddEvent(f.value)" #f="ngForm">\n\n      <ion-list>\n\n        <ion-item>\n\n          <ion-label>Nombre</ion-label>\n\n          <ion-input type="text" placeholder="nombre" name="nevent" ngModel required></ion-input>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-label>Descripción</ion-label>\n\n          <ion-input class="description"  type="text" placeholder="desc" name="desc" ngModel required></ion-input>\n\n        </ion-item>\n\n        <ion-item>\n\n            <ion-label>Icono</ion-label>\n\n            <ion-input type="file" name="icon" ngModel required></ion-input>\n\n           </ion-item>\n\n      </ion-list>\n\n      <button ion-button block type="submit" [disabled]="!f.valid">Crear</button>\n\n    </form>\n\n    </ion-content>\n\n    '/*ion-inline-end:"C:\Users\User\Desktop\Nueva carpeta\Grupala\src\pages\nuevo-evento\nuevo-evento.html"*/,
+            selector: 'page-nuevo-evento',template:/*ion-inline-start:"C:\Users\enriq\Documents\GitHub\Grupala\src\pages\nuevo-evento\nuevo-evento.html"*/'<!--\n\n  Generated template for the NuevoEventoPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Crear evento</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n    <form (ngSubmit)="onAddEvent(f.value)" #f="ngForm">\n\n      <ion-list>\n\n        <ion-item>\n\n          <ion-label>Nombre</ion-label>\n\n          <ion-input type="text" placeholder="nombre" name="nevent" ngModel required></ion-input>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-label>Descripción</ion-label>\n\n          <ion-input class="description"  type="text" placeholder="desc" name="desc" ngModel required></ion-input>\n\n        </ion-item>\n\n        <ion-item>\n\n            <ion-label>Icono</ion-label>\n\n            <ion-input type="file" name="icon" ngModel required></ion-input>\n\n           </ion-item>\n\n      </ion-list>\n\n      <button ion-button block type="submit" [disabled]="!f.valid">Crear</button>\n\n    </form>\n\n    </ion-content>\n\n    '/*ion-inline-end:"C:\Users\enriq\Documents\GitHub\Grupala\src\pages\nuevo-evento\nuevo-evento.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__services_event_service__["a" /* EventService */]])
     ], NuevoEventoPage);
@@ -583,7 +512,8 @@ var NuevoEventoPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_group_service__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__nuevo_grupo_nuevo_grupo__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__nuevo_grupo_nuevo_grupo__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mis_eventos_mis_eventos__ = __webpack_require__(159);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -593,6 +523,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -622,6 +553,9 @@ var MisGruposPage = /** @class */ (function () {
     MisGruposPage.prototype.onLoadGroupPage = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__nuevo_grupo_nuevo_grupo__["a" /* NuevoGrupoPage */]);
     };
+    MisGruposPage.prototype.eventosPage = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__mis_eventos_mis_eventos__["a" /* MisEventosPage */]);
+    };
     MisGruposPage.prototype.setFilteredItems = function () {
         this.groups = this.GroupService.filterItems(this.searchTerm);
     };
@@ -630,7 +564,7 @@ var MisGruposPage = /** @class */ (function () {
     };
     MisGruposPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-mis-grupos',template:/*ion-inline-start:"C:\Users\User\Desktop\Nueva carpeta\Grupala\src\pages\mis-grupos\mis-grupos.html"*/'<!--\n\n  Generated template for the MisGruposPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>MisGrupos</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-searchbar animated [(ngModel)]="searchTerm" (ionChange)="setFilteredItems()"></ion-searchbar>\n\n\n\n\n\n  <ion-list>\n\n    <button ion-item *ngFor="let group of groups">\n\n      <tr>\n\n        <td>\n\n            <ion-avatar><img [src]="group.foto"></ion-avatar>\n\n        </td>\n\n        <td>\n\n          <h2>{{group.ngroup}}</h2>\n\n          <h3>{{group.type}}</h3>\n\n        </td>\n\n      </tr>\n\n    </button>\n\n  </ion-list>\n\n  <button ion-button full color="secondary" (click)="onLoadGroupPage()">Nuevo grupo</button>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\User\Desktop\Nueva carpeta\Grupala\src\pages\mis-grupos\mis-grupos.html"*/,
+            selector: 'page-mis-grupos',template:/*ion-inline-start:"C:\Users\enriq\Documents\GitHub\Grupala\src\pages\mis-grupos\mis-grupos.html"*/'<!--\n\n  Generated template for the MisGruposPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>MisGrupos</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-searchbar animated [(ngModel)]="searchTerm" (ionChange)="setFilteredItems()"></ion-searchbar>\n\n\n\n\n\n  <ion-list>\n\n    <ion-item *ngFor="let group of groups">\n\n      <tr>\n\n        <td>\n\n            <ion-avatar><img [src]="group.foto"></ion-avatar>\n\n        </td>\n\n        <td>\n\n          <h2>{{group.ngroup}}</h2>\n\n          <h3>{{group.type}}</h3>\n\n          <button ion-button clear (click)="eventosPage()">eventos</button>\n\n        </td>\n\n      </tr>\n\n    </ion-item>\n\n  </ion-list>\n\n  <button ion-button full color="secondary" (click)="onLoadGroupPage()">Nuevo grupo</button>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\enriq\Documents\GitHub\Grupala\src\pages\mis-grupos\mis-grupos.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__services_group_service__["a" /* GroupService */]])
     ], MisGruposPage);
@@ -671,11 +605,11 @@ var map = {
 		8
 	],
 	"../pages/grupo/grupo.module": [
-		450,
+		451,
 		7
 	],
 	"../pages/hilos/hilos.module": [
-		451,
+		450,
 		6
 	],
 	"../pages/info-grupo/info-grupo.module": [
@@ -786,11 +720,11 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(439);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_home_home__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_home_home__ = __webpack_require__(84);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_list_list__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_registro_registro__ = __webpack_require__(132);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_mis_grupos_mis_grupos__ = __webpack_require__(161);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_nuevo_grupo_nuevo_grupo__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_nuevo_grupo_nuevo_grupo__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_mis_eventos_mis_eventos__ = __webpack_require__(159);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_nuevo_evento_nuevo_evento__ = __webpack_require__(160);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_grupo_grupo__ = __webpack_require__(45);
@@ -799,10 +733,10 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_native_status_bar__ = __webpack_require__(281);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__ionic_native_splash_screen__ = __webpack_require__(284);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__app_firebase_credentials__ = __webpack_require__(447);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_angularfire2__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_angularfire2__ = __webpack_require__(75);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_angularfire2_database__ = __webpack_require__(116);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_info_grupo_info_grupo__ = __webpack_require__(64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__services_contact_service__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__services_contact_service__ = __webpack_require__(74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_login_login__ = __webpack_require__(158);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__services_group_service__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__services_event_service__ = __webpack_require__(133);
@@ -865,8 +799,8 @@ var AppModule = /** @class */ (function () {
                     links: [
                         { loadChildren: '../pages/busqueda/busqueda.module#BusquedaPageModule', name: 'BusquedaPage', segment: 'busqueda', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/foro/foro.module#ForoPageModule', name: 'ForoPage', segment: 'foro', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/grupo/grupo.module#GrupoPageModule', name: 'GrupoPage', segment: 'grupo', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/hilos/hilos.module#HilosPageModule', name: 'HilosPage', segment: 'hilos', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/grupo/grupo.module#GrupoPageModule', name: 'GrupoPage', segment: 'grupo', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/info-grupo/info-grupo.module#InfoGrupoPageModule', name: 'InfoGrupoPage', segment: 'info-grupo', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/mis-eventos/mis-eventos.module#MisEventosPageModule', name: 'MisEventosPage', segment: 'mis-eventos', priority: 'low', defaultHistory: [] },
@@ -958,10 +892,9 @@ var Post = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(281);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(284);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(84);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login__ = __webpack_require__(158);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_mis_grupos_mis_grupos__ = __webpack_require__(161);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_mis_eventos_mis_eventos__ = __webpack_require__(159);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -971,7 +904,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
 
 
 
@@ -990,7 +922,6 @@ var MyApp = /** @class */ (function () {
         this.pages = [
             { title: 'Home', component: __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */] },
             { title: 'Mis Grupos', component: __WEBPACK_IMPORTED_MODULE_6__pages_mis_grupos_mis_grupos__["a" /* MisGruposPage */] },
-            { title: 'Mis Eventos', component: __WEBPACK_IMPORTED_MODULE_7__pages_mis_eventos_mis_eventos__["a" /* MisEventosPage */] },
             { title: 'Cerrar sesion', component: __WEBPACK_IMPORTED_MODULE_5__pages_login_login__["a" /* LoginPage */] }
         ];
     }
@@ -1013,7 +944,7 @@ var MyApp = /** @class */ (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\User\Desktop\Nueva carpeta\Grupala\src\app\app.html"*/'<ion-menu [content]="content" side="end">\n\n  <ion-header>\n\n    <ion-toolbar>\n\n      <ion-title>Menu</ion-title>\n\n    </ion-toolbar>\n\n  </ion-header>\n\n\n\n  <ion-content>\n\n    <ion-list>\n\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n\n        {{p.title}}\n\n      </button>\n\n    </ion-list>\n\n  </ion-content>\n\n\n\n</ion-menu>\n\n\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"C:\Users\User\Desktop\Nueva carpeta\Grupala\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\enriq\Documents\GitHub\Grupala\src\app\app.html"*/'<ion-menu [content]="content" side="end">\n\n  <ion-header>\n\n    <ion-toolbar>\n\n      <ion-title>Menu</ion-title>\n\n    </ion-toolbar>\n\n  </ion-header>\n\n\n\n  <ion-content>\n\n    <ion-list>\n\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n\n        {{p.title}}\n\n      </button>\n\n    </ion-list>\n\n  </ion-content>\n\n\n\n</ion-menu>\n\n\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"C:\Users\enriq\Documents\GitHub\Grupala\src\app\app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
@@ -1102,7 +1033,7 @@ var GrupoPage = /** @class */ (function () {
     };
     GrupoPage = GrupoPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-            selector: 'page-grupo',template:/*ion-inline-start:"C:\Users\User\Desktop\Nueva carpeta\Grupala\src\pages\grupo\grupo.html"*/'<!--\n\n  Generated template for the GrupoPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar >\n\n      <button ion-button menuToggle end>\n\n          <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n    <ion-title>Grupala</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding style="background: #232931">\n\n  <h3 class="titulo">D&D</h3>\n\n  <h4 class="titulo1">Noticias</h4>\n\n\n\n  <ion-list *ngFor = "let noticia of noticias" >\n\n    <ion-card color="secondary" >\n\n      <ion-card-content>\n\n          <div class="imagen">\n\n            <ion-icon name={{noticia.icono}}></ion-icon>\n\n          </div>\n\n          <div class="mensaje">\n\n            {{noticia.mensaje}}\n\n          </div>\n\n      </ion-card-content>\n\n    </ion-card>\n\n  </ion-list>\n\n  \n\n\n\n</ion-content>\n\n\n\n<ion-footer>\n\n    <ion-toolbar>\n\n        <button ion-button  class="botoncito"  >Noticias</button>\n\n        <button ion-button    class="botoncito" (click)="goToForo()" >Foro</button>\n\n        <button ion-button   class="botoncito" (click)="goToEventos()" >Eventos</button>\n\n        <button ion-button    class="botoncito" (click)="goToInfo()" >Cambios</button>\n\n        <button ion-button     class="botoncito" (click)="goToLista()" >Amigos</button>\n\n    </ion-toolbar>\n\n</ion-footer>'/*ion-inline-end:"C:\Users\User\Desktop\Nueva carpeta\Grupala\src\pages\grupo\grupo.html"*/,
+            selector: 'page-grupo',template:/*ion-inline-start:"C:\Users\enriq\Documents\GitHub\Grupala\src\pages\grupo\grupo.html"*/'<!--\n\n  Generated template for the GrupoPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar >\n\n      <button ion-button menuToggle end>\n\n          <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n    <ion-title>Grupala</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding style="background: #232931">\n\n  <h3 class="titulo">D&D</h3>\n\n  <h4 class="titulo1">Noticias</h4>\n\n\n\n  <ion-list *ngFor = "let noticia of noticias" >\n\n    <ion-card color="secondary" >\n\n      <ion-card-content>\n\n          <div class="imagen">\n\n            <ion-icon name={{noticia.icono}}></ion-icon>\n\n          </div>\n\n          <div class="mensaje">\n\n            {{noticia.mensaje}}\n\n          </div>\n\n      </ion-card-content>\n\n    </ion-card>\n\n  </ion-list>\n\n  \n\n\n\n</ion-content>\n\n\n\n<ion-footer>\n\n    <ion-toolbar>\n\n        <button ion-button  class="botoncito"  >Noticias</button>\n\n        <button ion-button    class="botoncito" (click)="goToForo()" >Foro</button>\n\n        <button ion-button   class="botoncito" (click)="goToEventos()" >Eventos</button>\n\n        <button ion-button    class="botoncito" (click)="goToInfo()" >Cambios</button>\n\n        <button ion-button     class="botoncito" (click)="goToLista()" >Amigos</button>\n\n    </ion-toolbar>\n\n</ion-footer>'/*ion-inline-end:"C:\Users\enriq\Documents\GitHub\Grupala\src\pages\grupo\grupo.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__services_noticia_service__["a" /* NoticiaService */]])
     ], GrupoPage);
@@ -1234,7 +1165,7 @@ var ForoPage = /** @class */ (function () {
     };
     ForoPage = ForoPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-foro',template:/*ion-inline-start:"C:\Users\User\Desktop\Nueva carpeta\Grupala\src\pages\foro\foro.html"*/'<!--\n\n  Generated template for the ForoPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Grupala</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding style="background: #232931">\n\n  <h3 class="titulo" color="light">Foros de D&D</h3>\n\n\n\n  <ion-list *ngFor = "let post of posts" class="Foros_dd">\n\n    <ion-card class="los_hilos" (click)="alhilo()" color="secondary">\n\n      <ion-card-header>\n\n        <ion-card-title class="titulos" style="color:white">{{post.titulo}}</ion-card-title>\n\n      </ion-card-header>\n\n      <ion-card-content style="color:white">\n\n        {{post.desc}}\n\n      </ion-card-content>\n\n    </ion-card>\n\n  </ion-list>\n\n  \n\n\n\n</ion-content>\n\n\n\n<ion-footer>\n\n  <ion-toolbar>\n\n      <button ion-button  class="botoncito"  (click)="goToNoticias()">Noticias</button>\n\n      <button ion-button    class="botoncito" (click)="goToForo()" >Foro</button>\n\n      <button ion-button   class="botoncito" (click)="goToEventos()" >Eventos</button>\n\n      <button ion-button    class="botoncito" (click)="goToInfo()" >Cambios</button>\n\n      <button ion-button     class="botoncito" (click)="goToLista()" >Amigos</button>\n\n  </ion-toolbar>\n\n</ion-footer>\n\n'/*ion-inline-end:"C:\Users\User\Desktop\Nueva carpeta\Grupala\src\pages\foro\foro.html"*/,
+            selector: 'page-foro',template:/*ion-inline-start:"C:\Users\enriq\Documents\GitHub\Grupala\src\pages\foro\foro.html"*/'<!--\n\n  Generated template for the ForoPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Grupala</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding style="background: #232931">\n\n  <h3 class="titulo" color="light">Foros de D&D</h3>\n\n\n\n  <ion-list *ngFor = "let post of posts" class="Foros_dd">\n\n    <ion-card class="los_hilos" (click)="alhilo()" color="secondary">\n\n      <ion-card-header>\n\n        <ion-card-title class="titulos" style="color:white">{{post.titulo}}</ion-card-title>\n\n      </ion-card-header>\n\n      <ion-card-content style="color:white">\n\n        {{post.desc}}\n\n      </ion-card-content>\n\n    </ion-card>\n\n  </ion-list>\n\n  \n\n\n\n</ion-content>\n\n\n\n<ion-footer>\n\n  <ion-toolbar>\n\n      <button ion-button  class="botoncito"  (click)="goToNoticias()">Noticias</button>\n\n      <button ion-button    class="botoncito" (click)="goToForo()" >Foro</button>\n\n      <button ion-button   class="botoncito" (click)="goToEventos()" >Eventos</button>\n\n      <button ion-button    class="botoncito" (click)="goToInfo()" >Cambios</button>\n\n      <button ion-button     class="botoncito" (click)="goToLista()" >Amigos</button>\n\n  </ion-toolbar>\n\n</ion-footer>\n\n'/*ion-inline-end:"C:\Users\enriq\Documents\GitHub\Grupala\src\pages\foro\foro.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], ForoPage);
@@ -1257,7 +1188,7 @@ var ForoPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__grupo_grupo__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__list_list__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__foro_foro__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__models_noticia_model__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__models_noticia_model__ = __webpack_require__(115);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_noticia_service__ = __webpack_require__(72);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1316,7 +1247,7 @@ var InfoGrupoPage = /** @class */ (function () {
     };
     InfoGrupoPage = InfoGrupoPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-            selector: 'page-info-grupo',template:/*ion-inline-start:"C:\Users\User\Desktop\Nueva carpeta\Grupala\src\pages\info-grupo\info-grupo.html"*/'<!--\n\n  Generated template for the InfoGrupoPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle end>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Grupala</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding style="background: #232931;">\n\n    <form (ngSubmit)="update(f.value)" #f="ngForm" class="formulario">\n\n        <div text-wrap class="elemento">En caso de querer modificar el grupo rellene los siguientes campos.</div>\n\n        <ion-list>\n\n          <div class="elemento" >\n\n            <ion-label >Nuevo nombre del grupo</ion-label>\n\n          </div>\n\n          <ion-item style="border-radius: 8%" class="conBorde">\n\n            <ion-input  type="text" placeholder="" name="ngroup" ngModel ></ion-input>\n\n          </ion-item>\n\n          <div class="elemento">\n\n            <ion-label>Nuevo tipo de grupo</ion-label>\n\n          </div>\n\n          <ion-item style="border-radius: 8%"  class="conBorde">\n\n            <ion-input  type="text" placeholder="" name="type" ngModel ></ion-input>\n\n          </ion-item>\n\n          <div style="background: #232931;">\n\n            <ion-label class="elemento">Imagen</ion-label>\n\n            <ion-input style="color:#738598;background: #232931;" type="file" name="foto" ngModel ></ion-input>\n\n           </div>\n\n        </ion-list>\n\n        <button ion-button block type="submit" [disabled]="!f.valid">Aceptar</button> \n\n        \n\n      </form>\n\n\n\n</ion-content>\n\n<ion-footer style="background: #232931;">\n\n  <ion-toolbar >\n\n    <button ion-button    class="botoncito"  (click)="goToNoticias()">Noticias</button>\n\n    <button ion-button    class="botoncito" (click)="goToForo()" >Foro</button>\n\n    <button ion-button    class="botoncito" (click)="goToEventos()" >Eventos</button>\n\n    <button ion-button    class="botoncito"  >Cambios</button>\n\n    <button ion-button    class="botoncito" (click)="goToLista()" >Amigos</button>\n\n  </ion-toolbar>\n\n</ion-footer>'/*ion-inline-end:"C:\Users\User\Desktop\Nueva carpeta\Grupala\src\pages\info-grupo\info-grupo.html"*/,
+            selector: 'page-info-grupo',template:/*ion-inline-start:"C:\Users\enriq\Documents\GitHub\Grupala\src\pages\info-grupo\info-grupo.html"*/'<!--\n\n  Generated template for the InfoGrupoPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle end>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Grupala</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding style="background: #232931;">\n\n    <form (ngSubmit)="update(f.value)" #f="ngForm" class="formulario">\n\n        <div text-wrap class="elemento">En caso de querer modificar el grupo rellene los siguientes campos.</div>\n\n        <ion-list>\n\n          <div class="elemento" >\n\n            <ion-label >Nuevo nombre del grupo</ion-label>\n\n          </div>\n\n          <ion-item style="border-radius: 8%" class="conBorde">\n\n            <ion-input  type="text" placeholder="" name="ngroup" ngModel ></ion-input>\n\n          </ion-item>\n\n          <div class="elemento">\n\n            <ion-label>Nuevo tipo de grupo</ion-label>\n\n          </div>\n\n          <ion-item style="border-radius: 8%"  class="conBorde">\n\n            <ion-input  type="text" placeholder="" name="type" ngModel ></ion-input>\n\n          </ion-item>\n\n          <div style="background: #232931;">\n\n            <ion-label class="elemento">Imagen</ion-label>\n\n            <ion-input style="color:#738598;background: #232931;" type="file" name="foto" ngModel ></ion-input>\n\n           </div>\n\n        </ion-list>\n\n        <button ion-button block type="submit" [disabled]="!f.valid">Aceptar</button> \n\n        \n\n      </form>\n\n\n\n</ion-content>\n\n<ion-footer style="background: #232931;">\n\n  <ion-toolbar >\n\n    <button ion-button    class="botoncito"  (click)="goToNoticias()">Noticias</button>\n\n    <button ion-button    class="botoncito" (click)="goToForo()" >Foro</button>\n\n    <button ion-button    class="botoncito" (click)="goToEventos()" >Eventos</button>\n\n    <button ion-button    class="botoncito"  >Cambios</button>\n\n    <button ion-button    class="botoncito" (click)="goToLista()" >Amigos</button>\n\n  </ion-toolbar>\n\n</ion-footer>'/*ion-inline-end:"C:\Users\enriq\Documents\GitHub\Grupala\src\pages\info-grupo\info-grupo.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_0__services_group_service__["a" /* GroupService */], __WEBPACK_IMPORTED_MODULE_7__services_noticia_service__["a" /* NoticiaService */]])
     ], InfoGrupoPage);
@@ -1333,7 +1264,7 @@ var InfoGrupoPage = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NoticiaService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__models_noticia_model__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__models_noticia_model__ = __webpack_require__(115);
 
 /*
 Esta clase se encarga de contener las noticias de un grupo, Las noticias son limitas
@@ -1443,7 +1374,7 @@ var ListPage = /** @class */ (function () {
     };
     ListPage = ListPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-list',template:/*ion-inline-start:"C:\Users\User\Desktop\Nueva carpeta\Grupala\src\pages\list\list.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle end>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Grupala</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content style="background: #232931">\n\n    <ion-list>\n\n        <div style="background: #232931" ion-item *ngFor="let item of items">\n\n          <ion-icon  [name]="item.icon" item-start></ion-icon>\n\n          <div style="color:#738598;" >{{item.title}}</div>\n\n          <div style="color:white;" class="item-note" item-end>\n\n            {{item.note}}\n\n          </div>\n\n        </div>\n\n    </ion-list>  \n\n</ion-content>\n\n<ion-footer style="background: #232931">\n\n  <ion-toolbar>\n\n    <button ion-button  class="botoncito" (click)="goToNoticias()" >Noticias</button>\n\n    <button ion-button    class="botoncito" (click)="goToForo()" >Foro</button>\n\n    <button ion-button   class="botoncito" (click)="goToEventos()" >Eventos</button>\n\n    <button ion-button    class="botoncito" (click)="goToInfo()" >Cambios</button>\n\n    <button ion-button     class="botoncito"  >Amigos</button>\n\n  </ion-toolbar>\n\n</ion-footer> '/*ion-inline-end:"C:\Users\User\Desktop\Nueva carpeta\Grupala\src\pages\list\list.html"*/
+            selector: 'page-list',template:/*ion-inline-start:"C:\Users\enriq\Documents\GitHub\Grupala\src\pages\list\list.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle end>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Grupala</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content style="background: #232931">\n\n    <ion-list>\n\n        <div style="background: #232931" ion-item *ngFor="let item of items">\n\n          <ion-icon  [name]="item.icon" item-start></ion-icon>\n\n          <div style="color:#738598;" >{{item.title}}</div>\n\n          <div style="color:white;" class="item-note" item-end>\n\n            {{item.note}}\n\n          </div>\n\n        </div>\n\n    </ion-list>  \n\n</ion-content>\n\n<ion-footer style="background: #232931">\n\n  <ion-toolbar>\n\n    <button ion-button  class="botoncito" (click)="goToNoticias()" >Noticias</button>\n\n    <button ion-button    class="botoncito" (click)="goToForo()" >Foro</button>\n\n    <button ion-button   class="botoncito" (click)="goToEventos()" >Eventos</button>\n\n    <button ion-button    class="botoncito" (click)="goToInfo()" >Cambios</button>\n\n    <button ion-button     class="botoncito"  >Amigos</button>\n\n  </ion-toolbar>\n\n</ion-footer> '/*ion-inline-end:"C:\Users\enriq\Documents\GitHub\Grupala\src\pages\list\list.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], ListPage);
@@ -1455,7 +1386,77 @@ var ListPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 83:
+/***/ 74:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase__ = __webpack_require__(231);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_firebase__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var ContactService = /** @class */ (function () {
+    function ContactService(db) {
+        this.db = db;
+        this.contactsRef = this.db.list('Logins');
+    }
+    ContactService.prototype.addMember = function (value) {
+        __WEBPACK_IMPORTED_MODULE_2_firebase___default.a.database().ref('Logins/' + value.nusuario).set({
+            mail: value.eusuario,
+            contra: value.cusuario
+        });
+        // this.contacts.push(value);
+        //return this.contactsRef.push(value);
+    };
+    ContactService.prototype.getu = function () {
+        return this.susuario;
+    };
+    ContactService.prototype.pushu = function (a) {
+        this.susuario = a;
+    };
+    ContactService.prototype.getContacts = function (a) {
+        var uno = false;
+        var c = __WEBPACK_IMPORTED_MODULE_2_firebase___default.a.database().ref('/Logins/' + a.nusuario).once('value').then(function (snapshot) {
+            var username = (snapshot.val() && snapshot.val().contra);
+            return username == a.cusuario;
+            /*if(username == a.cusuario){
+                uno = true;
+                return uno;
+            }
+            if(username != a.cusuario){
+                uno = false;
+                return uno;
+            }*/
+        });
+        /*var path = "/Logins/"+a.nusuario+"/contra";
+        var c = firebase.database().ref(path).once('value');
+        alert(c);*/
+        //const l = db.ref('/Logins/');
+    };
+    ContactService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["a" /* AngularFireDatabase */]])
+    ], ContactService);
+    return ContactService;
+}());
+
+//# sourceMappingURL=contact.service.js.map
+
+/***/ }),
+
+/***/ 84:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1491,7 +1492,7 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\Users\User\Desktop\Nueva carpeta\Grupala\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle end>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Grupala</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding style="background: #232931">\n\n  <h3 style="color:#738598;">Bienvenido a Grupala</h3>\n\n  <ion-navbar class="buscador" color="dark">\n\n    <ion-searchbar class="entrada"></ion-searchbar>\n\n    <button ion-button solid  (click)="goToBus()" class="boton" >Buscar</button>\n\n  </ion-navbar>\n\n\n\n  <h4 style="color:#738598;">Grupos mas visitados</h4>\n\n  <ion-navbar color="secondary">\n\n      <ion-grid >\n\n          <ion-row >\n\n              <ion-col>\n\n              </ion-col>\n\n              <ion-col class="tabla">\n\n                Mgs\n\n                <br>\n\n                <ion-badge color="primary">\n\n                  800\n\n                </ion-badge>\n\n              </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n                <ion-col class="titulo">\n\n                  Videojuegos\n\n                </ion-col>\n\n                <ion-col class="tabla">\n\n                    pc master rage\n\n                    <br>\n\n                  <ion-badge color="primary">\n\n                      500\n\n                  </ion-badge>\n\n                </ion-col>\n\n              </ion-row>\n\n              <ion-row>\n\n                  <ion-col>\n\n                  </ion-col>\n\n                  <ion-col class="tabla">\n\n                    Borderland\n\n                    <br>\n\n                    <ion-badge color="primary">\n\n                        500\n\n                    </ion-badge>\n\n                  </ion-col>\n\n               </ion-row>\n\n      </ion-grid>\n\n\n\n      <ion-grid >\n\n          <ion-row>\n\n              <ion-col>\n\n              </ion-col>\n\n              <ion-col class="tabla">\n\n                Dresden\n\n               <br>\n\n                <ion-badge color="primary">\n\n                    300\n\n                </ion-badge>\n\n              </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n                <ion-col class="titulo">\n\n                  Rol\n\n                </ion-col>\n\n                <ion-col class="tabla">\n\n                  D&D\n\n                 <br>\n\n                  <ion-badge color="primary">\n\n                      250\n\n                  </ion-badge>\n\n                </ion-col>\n\n              </ion-row>\n\n      </ion-grid>\n\n\n\n      <ion-grid >\n\n          <ion-row>\n\n              <ion-col>\n\n              </ion-col>\n\n              <ion-col class="tabla">\n\n                FurCom\n\n                <br>\n\n                <ion-badge color="primary">\n\n                    50\n\n                </ion-badge>\n\n              </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n                <ion-col class="titulo">\n\n                  Furry\n\n                </ion-col>\n\n                <ion-col class="tabla">\n\n                  Centauros\n\n                 <br>\n\n                  <ion-badge color="primary">\n\n                      40\n\n                  </ion-badge>\n\n                </ion-col>\n\n              </ion-row>\n\n              <ion-row>\n\n                  <ion-col>\n\n                  </ion-col>\n\n                  <ion-col class="tabla">\n\n                    Fursonas\n\n                   <br>\n\n                    <ion-badge color="primary">\n\n                        45\n\n                    </ion-badge>\n\n                  </ion-col>\n\n               </ion-row>\n\n      </ion-grid>\n\n  </ion-navbar>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\User\Desktop\Nueva carpeta\Grupala\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"C:\Users\enriq\Documents\GitHub\Grupala\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle end>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Grupala</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding style="background: #232931">\n\n  <h3 style="color:#738598;">Bienvenido a Grupala</h3>\n\n  <ion-navbar class="buscador" color="dark">\n\n    <ion-searchbar class="entrada"></ion-searchbar>\n\n    <button ion-button solid  (click)="goToBus()" class="boton" >Buscar</button>\n\n  </ion-navbar>\n\n\n\n  <h4 style="color:#738598;">Grupos mas visitados</h4>\n\n  <ion-navbar color="secondary">\n\n      <ion-grid >\n\n          <ion-row >\n\n              <ion-col>\n\n              </ion-col>\n\n              <ion-col class="tabla">\n\n                Mgs\n\n                <br>\n\n                <ion-badge color="primary">\n\n                  800\n\n                </ion-badge>\n\n              </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n                <ion-col class="titulo">\n\n                  Videojuegos\n\n                </ion-col>\n\n                <ion-col class="tabla">\n\n                    pc master rage\n\n                    <br>\n\n                  <ion-badge color="primary">\n\n                      500\n\n                  </ion-badge>\n\n                </ion-col>\n\n              </ion-row>\n\n              <ion-row>\n\n                  <ion-col>\n\n                  </ion-col>\n\n                  <ion-col class="tabla">\n\n                    Borderland\n\n                    <br>\n\n                    <ion-badge color="primary">\n\n                        500\n\n                    </ion-badge>\n\n                  </ion-col>\n\n               </ion-row>\n\n      </ion-grid>\n\n\n\n      <ion-grid >\n\n          <ion-row>\n\n              <ion-col>\n\n              </ion-col>\n\n              <ion-col class="tabla">\n\n                Dresden\n\n               <br>\n\n                <ion-badge color="primary">\n\n                    300\n\n                </ion-badge>\n\n              </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n                <ion-col class="titulo">\n\n                  Rol\n\n                </ion-col>\n\n                <ion-col class="tabla">\n\n                  D&D\n\n                 <br>\n\n                  <ion-badge color="primary">\n\n                      250\n\n                  </ion-badge>\n\n                </ion-col>\n\n              </ion-row>\n\n      </ion-grid>\n\n\n\n      <ion-grid >\n\n          <ion-row>\n\n              <ion-col>\n\n              </ion-col>\n\n              <ion-col class="tabla">\n\n                FurCom\n\n                <br>\n\n                <ion-badge color="primary">\n\n                    50\n\n                </ion-badge>\n\n              </ion-col>\n\n            </ion-row>\n\n            <ion-row>\n\n                <ion-col class="titulo">\n\n                  Furry\n\n                </ion-col>\n\n                <ion-col class="tabla">\n\n                  Centauros\n\n                 <br>\n\n                  <ion-badge color="primary">\n\n                      40\n\n                  </ion-badge>\n\n                </ion-col>\n\n              </ion-row>\n\n              <ion-row>\n\n                  <ion-col>\n\n                  </ion-col>\n\n                  <ion-col class="tabla">\n\n                    Fursonas\n\n                   <br>\n\n                    <ion-badge color="primary">\n\n                        45\n\n                    </ion-badge>\n\n                  </ion-col>\n\n               </ion-row>\n\n      </ion-grid>\n\n  </ion-navbar>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\enriq\Documents\GitHub\Grupala\src\pages\home\home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_3_angularfire2_database__["a" /* AngularFireDatabase */]])
     ], HomePage);
@@ -1502,7 +1503,7 @@ var HomePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 88:
+/***/ 89:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1544,7 +1545,7 @@ var NuevoGrupoPage = /** @class */ (function () {
     };
     NuevoGrupoPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-nuevo-grupo',template:/*ion-inline-start:"C:\Users\User\Desktop\Nueva carpeta\Grupala\src\pages\nuevo-grupo\nuevo-grupo.html"*/'<!--\n\n  Generated template for the NuevoGrupoPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>crear nuevo grupo</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n<form (ngSubmit)="onAddGroup(f.value)" #f="ngForm">\n\n  <ion-list>\n\n    <ion-item>\n\n      <ion-label>Nombre</ion-label>\n\n      <ion-input type="text" placeholder="nombre" name="ngroup" ngModel required></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label>Tema</ion-label>\n\n      <ion-input type="text" placeholder="tema" name="type" ngModel required></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n        <ion-label>Imagen</ion-label>\n\n        <ion-input type="file" name="foto" ngModel></ion-input>\n\n       </ion-item>\n\n  </ion-list>\n\n  <button ion-button block type="submit" [disabled]="!f.valid">Crear</button>\n\n</form>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\User\Desktop\Nueva carpeta\Grupala\src\pages\nuevo-grupo\nuevo-grupo.html"*/,
+            selector: 'page-nuevo-grupo',template:/*ion-inline-start:"C:\Users\enriq\Documents\GitHub\Grupala\src\pages\nuevo-grupo\nuevo-grupo.html"*/'<!--\n\n  Generated template for the NuevoGrupoPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>crear nuevo grupo</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n<form (ngSubmit)="onAddGroup(f.value)" #f="ngForm">\n\n  <ion-list>\n\n    <ion-item>\n\n      <ion-label>Nombre</ion-label>\n\n      <ion-input type="text" placeholder="nombre" name="ngroup" ngModel required></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label>Tema</ion-label>\n\n      <ion-input type="text" placeholder="tema" name="type" ngModel required></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n        <ion-label>Imagen</ion-label>\n\n        <ion-input type="file" name="foto" ngModel></ion-input>\n\n       </ion-item>\n\n  </ion-list>\n\n  <button ion-button block type="submit" [disabled]="!f.valid">Crear</button>\n\n</form>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\enriq\Documents\GitHub\Grupala\src\pages\nuevo-grupo\nuevo-grupo.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__services_group_service__["a" /* GroupService */]])
     ], NuevoGrupoPage);

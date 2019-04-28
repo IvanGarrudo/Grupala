@@ -1,4 +1,4 @@
-import { BusquedaPage } from './busqueda';
+//import { BusquedaPage } from './busqueda';
 import { GrupoPage } from '../grupo/grupo';
 
 import { Component } from '@angular/core';

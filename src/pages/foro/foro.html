@@ -13,7 +13,7 @@
 <ion-content padding style="background: #232931">
   <h3 class="titulo" color="light">Foros de D&D</h3>
 
-  <ion-list *ngFor = "let post of posts" class="Foros_dd">
+  <ion-list *ngFor = "let post of listaposts" class="Foros_dd">
     <ion-card class="los_hilos" (click)="alhilo()" color="secondary">
       <ion-card-header>
         <ion-card-title class="titulos" style="color:white">{{post.titulo}}</ion-card-title>
@@ -29,6 +29,7 @@
 
 <ion-footer>
   <ion-toolbar>
+      <button ion-button  small block  (click)="goToCrear()">Nuevo Hilo</button>
       <button ion-button  class="botoncito"  (click)="goToNoticias()">Noticias</button>
       <button ion-button    class="botoncito" (click)="goToForo()" >Foro</button>
       <button ion-button   class="botoncito" (click)="goToEventos()" >Eventos</button>

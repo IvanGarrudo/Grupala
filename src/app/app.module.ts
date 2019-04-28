@@ -1,5 +1,7 @@
+import { CrearForoPage } from './../pages/crear-foro/crear-foro';
 import { BusquedaPage } from './../pages/busqueda/busqueda';
 import { NoticiaService } from './../services/noticia.service';
+import { PostService } from './../services/post.service';
 import { RegistroPageModule } from './../pages/registro/registro.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -46,7 +48,8 @@ import { EventService } from '../services/event.service';
     GrupoPage,
     BusquedaPage,
     ForoPage,
-    HilosPage
+    HilosPage,
+    CrearForoPage
   ],
   imports: [
     BrowserModule,
@@ -70,7 +73,8 @@ import { EventService } from '../services/event.service';
     GrupoPage,
     BusquedaPage,
     ForoPage,
-    HilosPage
+    HilosPage,
+    CrearForoPage
   ],
   providers: [
     StatusBar,
@@ -79,7 +83,8 @@ import { EventService } from '../services/event.service';
     ContactService,
     EventService,
     NoticiaService,
-    GroupService
+    GroupService,
+    PostService
   ]
 })
 export class AppModule {}

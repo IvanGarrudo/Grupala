@@ -1,12 +1,14 @@
+import { CrearForoPage } from './../crear-foro/crear-foro';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HilosPage } from '../hilos/hilos';
-import { Noticia } from '../../models/noticia.model'
-import { NoticiaService } from '../../services/noticia.service';
+
 import { ListPage } from '../list/list';
 import { InfoGrupoPage } from '../info-grupo/info-grupo';
 import { GrupoPage } from '../grupo/grupo';
-import { Post } from './post';
+import { Post } from '../../models/post.model';
+import { PostService } from '../../services/post.service';
+
 
 /**
  * Generated class for the ForoPage page.
@@ -22,8 +24,9 @@ import { Post } from './post';
 })
 export class ForoPage {
 
-  public posts: Array<Post> =[new Post("Manuales","Hilo para hablar de manuales de D&D")];
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public listaposts: Array<Post> =[];
+  constructor(public navCtrl: NavController, public navParams: NavParams, private contactService: PostService) {
+    this.listaposts = this.contactService.posts;
   }
 
   ionViewDidLoad() {
@@ -52,6 +55,9 @@ export class ForoPage {
 
   goToEventos(){    
     //this.navCtrl.setRoot(EventosPage);
+  }
+  goToCrear(){
+    this.navCtrl.setRoot(CrearForoPage);
   }
 
 }

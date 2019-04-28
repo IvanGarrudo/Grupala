@@ -25817,21 +25817,14 @@ ion-navbar.toolbar {
 }
 
 .elemento {
+  background: #232931;
+  color: #738598;
   width: 80%;
   text-align: center;
-  margin: 0 auto;
 }
 
 .conBorde {
-  margin: 0 auto;
-  border: 1px solid black;
   width: 80%;
-}
-
-.botones {
-  width: 40%;
-  margin: 0 auto;
-  display: inline-block;
 }
 
 .botonera {
@@ -25839,7 +25832,6 @@ ion-navbar.toolbar {
 }
 
 #boton_registro {
-  background-color: #0e2f88;
   font-size: 13px;
   vertical-align: middle;
   font-weight: bold;

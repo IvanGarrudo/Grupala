@@ -1,24 +1,23 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
+    <button ion-button menuToggle end>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>List</ion-title>
+    <ion-title>Grupala</ion-title>
   </ion-navbar>
 </ion-header>
-
-<ion-content>
+<ion-content style="background: #232931">
     <ion-list>
-        <div ion-item *ngFor="let item of items">
-          <ion-icon [name]="item.icon" item-start></ion-icon>
-          {{item.title}}
-          <div class="item-note" item-end>
+        <div style="background: #232931" ion-item *ngFor="let item of items">
+          <ion-icon  [name]="item.icon" item-start></ion-icon>
+          <div style="color:#738598;" >{{item.title}}</div>
+          <div style="color:white;" class="item-note" item-end>
             {{item.note}}
           </div>
         </div>
     </ion-list>  
 </ion-content>
-<ion-footer>
+<ion-footer style="background: #232931">
   <ion-toolbar>
       <button ion-button  class="botoncito"  >Noticias</button>
       <button ion-button    class="botoncito" >Foro</button>

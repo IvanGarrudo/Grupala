@@ -15,11 +15,11 @@ export class NoticiaService{
 
     add( nueva:Noticia ){
         if(this.tamaño<this.limite){
-            this.noticias.push(nueva);
+            this.noticias.unshift(nueva);
             this.tamaño++;
         }else{
             this.noticias.splice(9);
-            this.noticias.push(nueva);
+            this.noticias.unshift(nueva);
         }
     }
 

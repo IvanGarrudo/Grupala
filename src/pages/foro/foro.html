@@ -13,32 +13,26 @@
 <ion-content padding>
   <h3 class="titulo">Foros de D&D</h3>
 
-  <ion-list class="Foros_dd">
+  <ion-list *ngFor = "let post of posts" class="Foros_dd">
     <ion-card class="los_hilos" (click)="alhilo()">
       <ion-card-header>
-        <ion-card-title class="titulos">Manuales</ion-card-title>
+        <ion-card-title class="titulos">{{post.titulo}}</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        Hilo para hablar de manuales de D&D
+        {{post.desc}}
       </ion-card-content>
     </ion-card>
-    <ion-card class="los_hilos">
-      <ion-card-header>
-        <ion-card-title class="titulos">Builds de personajes</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        Hilo para hablar sobre las builds de tus personajes
-      </ion-card-content>
-    </ion-card>
-    <ion-card class="los_hilos">
-        <ion-card-header>
-          <ion-card-title class="titulos">Anecdotas</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          Hilo para contar tus anecdotas, todos tenemos alguna
-        </ion-card-content>
-      </ion-card>
   </ion-list>
   
 
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+      <button ion-button  class="botoncito"  (click)="goToNoticias()">Noticias</button>
+      <button ion-button    class="botoncito" (click)="goToForo()" >Foro</button>
+      <button ion-button   class="botoncito" (click)="goToEventos()" >Eventos</button>
+      <button ion-button    class="botoncito" (click)="goToInfo()" >Cambios</button>
+      <button ion-button     class="botoncito" (click)="goToLista()" >Amigos</button>
+  </ion-toolbar>
+</ion-footer>

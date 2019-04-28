@@ -6,6 +6,8 @@ import { HomePage } from '../home/home';
 import { GrupoPage } from '../grupo/grupo';
 import { ListPage } from '../list/list';
 import { ForoPage } from '../foro/foro';
+import { Noticia } from '../../models/noticia.model'
+import { NoticiaService } from '../../services/noticia.service';
 
 /**
  * Generated class for the InfoGrupoPage page.
@@ -20,7 +22,7 @@ import { ForoPage } from '../foro/foro';
   templateUrl: 'info-grupo.html',
 })
 export class InfoGrupoPage {
-  constructor(public navCtrl: NavController, public navParams: NavParams, private InfoService :GroupService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private InfoService :GroupService, private Nueva :NoticiaService) {
   }
 
   ionViewDidLoad() {
@@ -28,6 +30,8 @@ export class InfoGrupoPage {
   }
   update(value:Group){
     this.InfoService.updateGroup(value);
+    var noticia: Noticia = new Noticia("chatboxes","El grupo Ahora se llama "+value.ngroup);
+    this.Nueva.add(noticia);
     this.navCtrl.setRoot(GrupoPage);
   }
   goToForo(){

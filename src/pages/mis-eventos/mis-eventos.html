@@ -10,11 +10,6 @@
   </ion-navbar>
 </ion-header>
 
-<ion-buttons end>
-    <button ion-button icon-only (click)="onLoadEventPage()">
-      <ion-icon name="add"></ion-icon>
-    </button>
-</ion-buttons>
 
 <ion-content padding>
   <ion-searchbar animated [(ngModel)]="searchTerm" (ionChange)="setFilteredItems()"></ion-searchbar>
@@ -33,4 +28,5 @@
       </tr>
     </button>
   </ion-list>
+  <button ion-button full color="secondary" (click)="onLoadEventPage()">Nuevo evento</button>
 </ion-content>

@@ -11,14 +11,11 @@ import { ListPage } from '../pages/list/list';
 import { RegistroPage } from '../pages/registro/registro';
 import { MisGruposPage } from '../pages/mis-grupos/mis-grupos';
 import { NuevoGrupoPage } from '../pages/nuevo-grupo/nuevo-grupo';
-<<<<<<< HEAD
 import { MisEventosPage } from '../pages/mis-eventos/mis-eventos';
 import { NuevoEventoPage } from '../pages/nuevo-evento/nuevo-evento';
-=======
 import { GrupoPage } from '../pages/grupo/grupo';
 import { ForoPage } from '../pages/foro/foro';
 import { HilosPage } from '../pages/hilos/hilos';
->>>>>>> aa3ee2a229b3ac3141dc49433e458299b43a4d35
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -44,15 +41,12 @@ import { EventService } from '../services/event.service';
     LoginPage,
     MisGruposPage,
     NuevoGrupoPage,
-<<<<<<< HEAD
     MisEventosPage,
-    NuevoEventoPage
-=======
+    NuevoEventoPage,
     GrupoPage,
     BusquedaPage,
     ForoPage,
     HilosPage
->>>>>>> aa3ee2a229b3ac3141dc49433e458299b43a4d35
   ],
   imports: [
     BrowserModule,
@@ -71,28 +65,21 @@ import { EventService } from '../services/event.service';
     LoginPage,
     MisGruposPage,
     NuevoGrupoPage,
-<<<<<<< HEAD
     MisEventosPage,
-    NuevoEventoPage
-=======
+    NuevoEventoPage,
     GrupoPage,
     BusquedaPage,
     ForoPage,
     HilosPage
->>>>>>> aa3ee2a229b3ac3141dc49433e458299b43a4d35
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ContactService,
-<<<<<<< HEAD
-    GroupService,
-    EventService
-=======
+    EventService,
     NoticiaService,
     GroupService
->>>>>>> aa3ee2a229b3ac3141dc49433e458299b43a4d35
   ]
 })
 export class AppModule {}

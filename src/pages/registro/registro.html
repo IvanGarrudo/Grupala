@@ -9,14 +9,14 @@
     <button ion-button menuToggle end>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Grupala - Registro</ion-title>
+    <ion-title>Grupala</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding style="background: #232931">
   <form (ngSubmit)="onAddMember(f.value)" #f="ngForm" class="formulario">
     <ion-item text-wrap class="elemento">Para poder acceder a todas las posiblidades de nuestra app es necesario registrarse, no le llevará más de un minuto.</ion-item>
-    <ion-list>
+    <ion-list style="background: #232931">
       <ion-item class="elemento" >
         <ion-label >Nombre de usuario</ion-label>
       </ion-item>
@@ -39,7 +39,7 @@
           <ion-checkbox ngModel required name="aceptaCondiciones"></ion-checkbox><ion-label text-wrap>He leído y acepto las condiciones de uso</ion-label>
         </ion-item>
     </ion-list>
-    <ion-list class="botonera">
+    <ion-list class="botonera" style="background: #232931">
       <button ion-button block type="submit" [disabled]="!f.valid" class="botones">Aceptar</button> 
       <button ion-back-button class="botones" id="boton_cancelar">CANCELAR</button>
     </ion-list>

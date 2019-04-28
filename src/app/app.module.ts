@@ -11,6 +11,8 @@ import { ListPage } from '../pages/list/list';
 import { RegistroPage } from '../pages/registro/registro';
 import { MisGruposPage } from '../pages/mis-grupos/mis-grupos';
 import { NuevoGrupoPage } from '../pages/nuevo-grupo/nuevo-grupo';
+import { MisEventosPage } from '../pages/mis-eventos/mis-eventos';
+import { NuevoEventoPage } from '../pages/nuevo-evento/nuevo-evento';
 import { GrupoPage } from '../pages/grupo/grupo';
 import { ForoPage } from '../pages/foro/foro';
 import { HilosPage } from '../pages/hilos/hilos';
@@ -27,6 +29,7 @@ import { InfoGrupoPage } from '../pages/info-grupo/info-grupo';
 import { ContactService } from '../services/contact.service';
 import { LoginPage } from '../pages/login/login';
 import { GroupService } from '../services/group.service';
+import { EventService } from '../services/event.service';
 
 
 @NgModule({
@@ -38,6 +41,8 @@ import { GroupService } from '../services/group.service';
     LoginPage,
     MisGruposPage,
     NuevoGrupoPage,
+    MisEventosPage,
+    NuevoEventoPage,
     GrupoPage,
     BusquedaPage,
     ForoPage,
@@ -60,6 +65,8 @@ import { GroupService } from '../services/group.service';
     LoginPage,
     MisGruposPage,
     NuevoGrupoPage,
+    MisEventosPage,
+    NuevoEventoPage,
     GrupoPage,
     BusquedaPage,
     ForoPage,
@@ -70,6 +77,7 @@ import { GroupService } from '../services/group.service';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ContactService,
+    EventService,
     NoticiaService,
     GroupService
   ]

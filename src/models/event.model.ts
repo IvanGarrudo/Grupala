@@ -5,6 +5,7 @@ export interface Event {
     nevent: string;
 
     desc: string;
+    user:string[];
 
     icon: string;
 }

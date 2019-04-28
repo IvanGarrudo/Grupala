@@ -4,6 +4,7 @@ import { Group } from '../../models/grupo.model';
 import { GroupService } from '../../services/group.service';
 import { NuevoGrupoPage } from '../nuevo-grupo/nuevo-grupo';
 import { MisEventosPage } from '../mis-eventos/mis-eventos';
+import { GrupoPage } from '../grupo/grupo';
 
 
 @IonicPage()
@@ -48,5 +49,9 @@ export class MisGruposPage {
   ngOnInit(){
     this.setFilteredItems();
   }
+  goToNoticias(){
+    this.navCtrl.setRoot(GrupoPage);
+  }
+
 }
 

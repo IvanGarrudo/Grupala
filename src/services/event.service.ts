@@ -1,3 +1,4 @@
+import { ContactService } from './contact.service';
 import { Injectable } from "@angular/core";
 import { AngularFireDatabase } from "angularfire2/database";
 import { Event } from "../models/event.model";
@@ -5,8 +6,8 @@ import { Event } from "../models/event.model";
 @Injectable()
 export class EventService{
 
-    private events: Event [] = [{"nevent":"Gamers","desc":"Bla bla bla bla bla bla bla bla bla bla ","icon":"../../assets/imgs/logo.png"}];
-    constructor(){
+    private events: Event [] = [{"nevent":"Gamers","desc":"Bla bla bla bla bla bla bla bla bla bla ","icon":"../../assets/imgs/logo.png","user":[""]}];
+    constructor(private ContactService:ContactService){
 
     }
 
@@ -15,13 +16,16 @@ export class EventService{
     }
 
     addGroup(value: Event){
+        value.user=[];
         this.events.push(value);
     }
 
     updateGroup(value: Event){
 
     }
-
+    sss(){
+        this.events[1].user.push("-"+this.ContactService.getu())
+    }
     removeGroup(value: Event){
 
     }

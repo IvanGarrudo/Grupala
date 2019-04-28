@@ -1,14 +1,14 @@
 webpackJsonp([3],{
 
-/***/ 357:
+/***/ 853:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MisEventosPageModule", function() { return MisEventosPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mis_eventos__ = __webpack_require__(121);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NuevoGrupoPageModule", function() { return NuevoGrupoPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__nuevo_grupo__ = __webpack_require__(126);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var MisEventosPageModule = /** @class */ (function () {
-    function MisEventosPageModule() {
+var NuevoGrupoPageModule = /** @class */ (function () {
+    function NuevoGrupoPageModule() {
     }
-    MisEventosPageModule = __decorate([
+    NuevoGrupoPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__mis_eventos__["a" /* MisEventosPage */],
+                __WEBPACK_IMPORTED_MODULE_2__nuevo_grupo__["a" /* NuevoGrupoPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__mis_eventos__["a" /* MisEventosPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__nuevo_grupo__["a" /* NuevoGrupoPage */]),
             ],
         })
-    ], MisEventosPageModule);
-    return MisEventosPageModule;
+    ], NuevoGrupoPageModule);
+    return NuevoGrupoPageModule;
 }());
 
-//# sourceMappingURL=mis-eventos.module.js.map
+//# sourceMappingURL=nuevo-grupo.module.js.map
 
 /***/ })
 

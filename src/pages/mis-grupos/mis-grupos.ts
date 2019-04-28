@@ -34,6 +34,9 @@ export class MisGruposPage {
     this.groups = this.GroupService.getGroup();
   }
 
+  goToNoticias(){
+    this.navCtrl.push(GrupoPage);
+  }
   onLoadGroupPage(){
     this.navCtrl.push(NuevoGrupoPage);
   }
@@ -48,9 +51,6 @@ export class MisGruposPage {
 
   ngOnInit(){
     this.setFilteredItems();
-  }
-  goToNoticias(){
-    this.navCtrl.setRoot(GrupoPage);
   }
 
 }

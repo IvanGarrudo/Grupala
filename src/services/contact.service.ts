@@ -10,7 +10,7 @@ import { LoginPage } from "../pages/login/login";
 
 @Injectable()
 export class ContactService{
-  
+    private susuario:string;
 
     private contactsRef=this.db.list<Login>('Logins');
     
@@ -27,7 +27,12 @@ export class ContactService{
        //return this.contactsRef.push(value);
 
     }
-
+    getu(){
+        return this.susuario
+    }
+    pushu(a:string){
+        this.susuario=a;
+    }
     getContacts(a: Login){
         var uno = false;
         

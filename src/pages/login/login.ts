@@ -44,7 +44,7 @@ export class LoginPage {
     }else{
       alert("Usuario o contraseña no validos");
     }
-    
+    this.ContactService.pushu(a.nusuario);
     /*this.ContactService.getContacts().then(this.contacts){
       var sesion = false;
       console.log(this.contacts)

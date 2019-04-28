@@ -1,14 +1,25 @@
 webpackJsonp([5],{
 
+<<<<<<< HEAD
 /***/ 347:
+=======
+/***/ 348:
+>>>>>>> aa3ee2a229b3ac3141dc49433e458299b43a4d35
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+<<<<<<< HEAD
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginPageModule", function() { return LoginPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login__ = __webpack_require__(231);
+=======
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GrupoPageModule", function() { return GrupoPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__grupo__ = __webpack_require__(45);
+>>>>>>> aa3ee2a229b3ac3141dc49433e458299b43a4d35
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,6 +29,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+<<<<<<< HEAD
 var LoginPageModule = /** @class */ (function () {
     function LoginPageModule() {
     }
@@ -35,6 +47,25 @@ var LoginPageModule = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=login.module.js.map
+=======
+var GrupoPageModule = /** @class */ (function () {
+    function GrupoPageModule() {
+    }
+    GrupoPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__grupo__["a" /* GrupoPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__grupo__["a" /* GrupoPage */]),
+            ],
+        })
+    ], GrupoPageModule);
+    return GrupoPageModule;
+}());
+
+//# sourceMappingURL=grupo.module.js.map
+>>>>>>> aa3ee2a229b3ac3141dc49433e458299b43a4d35
 
 /***/ })
 

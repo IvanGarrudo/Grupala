@@ -10,6 +10,9 @@ import { LoginPage } from '../pages/login/login';
 import { InfoGrupoPage } from '../pages/info-grupo/info-grupo';
 import { MisGruposPage } from '../pages/mis-grupos/mis-grupos';
 import { MisEventosPage } from '../pages/mis-eventos/mis-eventos';
+import { GrupoPage } from '../pages/grupo/grupo';
+import { BusquedaPage } from './../pages/busqueda/busqueda';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -17,7 +20,7 @@ import { MisEventosPage } from '../pages/mis-eventos/mis-eventos';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = InfoGrupoPage;
+  rootPage: any = ListPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -28,7 +31,8 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'Mis Grupos', component: MisGruposPage },
-      { title: 'Mis Eventos', component: MisEventosPage }
+      { title: 'Mis Eventos', component: MisEventosPage },
+      { title: 'Cerrar sesion', component: LoginPage }
     ];
 
   }

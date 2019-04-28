@@ -25692,6 +25692,42 @@ ion-navbar.toolbar {
   min-height: 46px;
 }
 
+<<<<<<< HEAD
+=======
+.buscador {
+  width: 100%;
+}
+
+.entrada {
+  width: 75%;
+  margin: 0 auto;
+  float: left;
+}
+
+.boton {
+  width: 25%;
+  font-size: 11pt;
+  margin: 0 auto;
+  margin-top: 2%;
+  float: right;
+}
+
+.titulo {
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+.tabla {
+  border: black 2px solid;
+  height: 100%;
+}
+
+.tabla {
+  border: black 2px solid;
+  height: 100%;
+}
+
+>>>>>>> aa3ee2a229b3ac3141dc49433e458299b43a4d35
 .botoncito {
   width: 17.6%;
   font-size: 8pt;
@@ -25701,6 +25737,10 @@ ion-navbar.toolbar {
 .imagen {
   width: 10%;
   float: left;
+<<<<<<< HEAD
+=======
+  height: 10%;
+>>>>>>> aa3ee2a229b3ac3141dc49433e458299b43a4d35
 }
 
 .mensaje {
@@ -25709,8 +25749,38 @@ ion-navbar.toolbar {
   font-size: 9pt;
 }
 
+<<<<<<< HEAD
 ion-searchbar .searchbar-input-container .searchbar-input {
   border-radius: 20px;
+=======
+.titulo {
+  color: #79848d;
+  text-align: center;
+}
+
+.titulo1 {
+  color: #79848d;
+}
+
+.perfil_hilo {
+  width: 20%;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.comentario {
+  width: 68%;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.hilo {
+  text-align: center;
+}
+
+.img_perfil {
+  height: 100%;
+>>>>>>> aa3ee2a229b3ac3141dc49433e458299b43a4d35
 }
 
 .buscador {
@@ -25746,10 +25816,13 @@ ion-searchbar .searchbar-input-container .searchbar-input {
   height: 100%;
 }
 
+<<<<<<< HEAD
 .tabla:hover {
   background: red;
 }
 
+=======
+>>>>>>> aa3ee2a229b3ac3141dc49433e458299b43a4d35
 .formulario {
   width: 100%;
 }
@@ -25801,6 +25874,7 @@ ion-searchbar .searchbar-input-container .searchbar-input {
 }
 
 .elemento {
+<<<<<<< HEAD
   width: 80%;
   text-align: center;
   margin: 0 auto;
@@ -25818,12 +25892,27 @@ ion-searchbar .searchbar-input-container .searchbar-input {
   display: inline-block;
 }
 
+=======
+  background: #232931;
+  color: #738598;
+  width: 80%;
+  text-align: center;
+}
+
+.conBorde {
+  width: 80%;
+}
+
+>>>>>>> aa3ee2a229b3ac3141dc49433e458299b43a4d35
 .botonera {
   text-align: center;
 }
 
 #boton_registro {
+<<<<<<< HEAD
   background-color: #0e2f88;
+=======
+>>>>>>> aa3ee2a229b3ac3141dc49433e458299b43a4d35
   font-size: 13px;
   vertical-align: middle;
   font-weight: bold;
@@ -25835,6 +25924,7 @@ td {
   padding-right: 10px;
 }
 
+<<<<<<< HEAD
 td {
   padding-right: 10px;
 }
@@ -25843,6 +25933,8 @@ ion-searchbar .searchbar-input-container .searchbar-input {
   border-radius: 20px;
 }
 
+=======
+>>>>>>> aa3ee2a229b3ac3141dc49433e458299b43a4d35
 .formulario {
   width: 100%;
 }

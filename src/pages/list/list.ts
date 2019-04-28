@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { ForoPage } from '../foro/foro';
+import { InfoGrupoPage } from '../info-grupo/info-grupo';
+import { GrupoPage } from '../grupo/grupo';
 
 @Component({
   selector: 'page-list',
@@ -43,5 +46,24 @@ export class ListPage {
     this.navCtrl.push(ListPage, {
       item: item
     });
+  }
+  goToForo(){
+    this.navCtrl.setRoot(ForoPage);
+  }
+
+  goToLista(){
+    this.navCtrl.setRoot(ListPage);
+  }
+  
+  goToInfo(){
+    this.navCtrl.setRoot(InfoGrupoPage);
+  }
+
+  goToNoticias(){
+    this.navCtrl.setRoot(GrupoPage);
+  }
+
+  goToEventos(){    
+    //this.navCtrl.setRoot(EventosPage);
   }
 }

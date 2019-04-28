@@ -5,33 +5,40 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar>
+  <ion-navbar >
+      <button ion-button menuToggle end>
+          <ion-icon name="menu"></ion-icon>
+        </button>
     <ion-title>Grupala</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Noticias</h3>
+<ion-content padding >
+  <h3 class="titulo">D&D</h3>
+  <h4 class="titulo1">Noticias</h4>
 
-  <ion-card>
+  <ion-list *ngFor = "let noticia of noticias" color="dark">
+    <ion-card >
       <ion-card-content>
           <div class="imagen">
-            <ion-icon name="chatboxes"></ion-icon>
+            <ion-icon name={{noticia.icono}}></ion-icon>
           </div>
           <div class="mensaje">
-            PerezReverte a comentado: "3.5 es lo unico de D&D que se deberia considerar rol" en el hilo Manuales
+            {{noticia.mensaje}}
           </div>
       </ion-card-content>
-  </ion-card>
+    </ion-card>
+  </ion-list>
+  
 
 </ion-content>
 
 <ion-footer>
     <ion-toolbar>
         <button ion-button  class="botoncito"  >Noticias</button>
-        <button ion-button    class="botoncito" >Foro</button>
-        <button ion-button   class="botoncito" >Eventos</button>
-        <button ion-button    class="botoncito" >Admin</button>
-        <button ion-button     class="botoncito" >Amigos</button>
+        <button ion-button    class="botoncito" (click)="goToForo()" >Foro</button>
+        <button ion-button   class="botoncito" (click)="goToEventos()" >Eventos</button>
+        <button ion-button    class="botoncito" (click)="goToInfo()" >Cambios</button>
+        <button ion-button     class="botoncito" (click)="goToLista()" >Amigos</button>
     </ion-toolbar>
 </ion-footer>

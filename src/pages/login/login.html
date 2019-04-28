@@ -6,33 +6,36 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title style="text-align: center">Grupala</ion-title>
+    <button ion-button menuToggle end>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Grupala</ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding>
+<ion-content padding style="background: #232931">
   <h3 class="elemento">Inicio de Sesion</h3>
   <form (ngSubmit)="comprobar(f.value)" #f="ngForm" class="formulario">
    
-    <ion-list>
-      <ion-item class="elemento">
+    <ion-list style="background: #232931">
+      <div class="elemento">
         <ion-label>E-mail</ion-label>
-      </ion-item>
-      <ion-item class="conBorde">
+      </div>
+      <ion-item >
         <ion-input type="text" placeholder="name@example.com" name="eusuario" ngModel required></ion-input>
       </ion-item>
-      <ion-item class="elemento">
+      <div class="elemento">
         <ion-label>Contraseña</ion-label>
-      </ion-item>
-      <ion-item class="conBorde">
+      </div>
+      <ion-item >
         <ion-input type="Password" placeholder="Texto" name="cusuario" ngModel required></ion-input>
       </ion-item>
     </ion-list>
     <ion-list class="botonera">
-      <button ion-button block type="submit" [disabled]="!f.valid" class="botones">Aceptar</button> 
+      <button ion-button block type="submit" [disabled]="!f.valid" >Aceptar</button> 
     </ion-list>
   </form>
   <ion-list class="botonera">
-  <button ion-button block class="botones" id="boton_registro" (click)="goToSignup()" >¿No tines cuenta?</button>
+  <button ion-button block  id="boton_registro" (click)="goToSignup()" >¿No tines cuenta?</button>
  </ion-list>
   
 </ion-content>

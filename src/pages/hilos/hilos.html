@@ -10,11 +10,11 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding style="background: #232931">
     <h3 class="titulo">Manuales</h3>
 
     <ion-list *ngFor = "let mensajes of listam" class="manuales">
-      <ion-card class="hilo">
+      <ion-card class="hilo" color="secondary">
         <ion-card-content>
           <div class="perfil_hilo"><img src={{mensajes.icono}} class="img_perfil"/></div>
           <div class="comentario">{{mensajes.mensaje}}</div>

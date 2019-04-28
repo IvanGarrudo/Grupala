@@ -3,6 +3,9 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Group } from '../../models/grupo.model';
 import { HomePage } from '../home/home';
+import { GrupoPage } from '../grupo/grupo';
+import { ListPage } from '../list/list';
+import { ForoPage } from '../foro/foro';
 
 /**
  * Generated class for the InfoGrupoPage page.
@@ -25,7 +28,25 @@ export class InfoGrupoPage {
   }
   update(value:Group){
     this.InfoService.updateGroup(value);
-    this.navCtrl.setRoot(HomePage);
-    this.navCtrl.goToRoot;
+    this.navCtrl.setRoot(GrupoPage);
+  }
+  goToForo(){
+    this.navCtrl.setRoot(ForoPage);
+  }
+
+  goToLista(){
+    this.navCtrl.setRoot(ListPage);
+  }
+  
+  goToInfo(){
+    this.navCtrl.setRoot(InfoGrupoPage);
+  }
+
+  goToNoticias(){
+    this.navCtrl.setRoot(GrupoPage);
+  }
+
+  goToEventos(){    
+    //this.navCtrl.setRoot(EventosPage);
   }
 }

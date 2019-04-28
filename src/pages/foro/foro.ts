@@ -54,7 +54,7 @@ export class ForoPage {
   }
 
   goToEventos(){    
-    //this.navCtrl.setRoot(EventosPage);
+    this.navCtrl.setRoot(MisEventosPage);
   }
   goToCrear(){
     this.navCtrl.setRoot(CrearForoPage);

@@ -1,3 +1,4 @@
+import { BusquedaPage } from './../pages/busqueda/busqueda';
 import { NoticiaService } from './../services/noticia.service';
 import { RegistroPageModule } from './../pages/registro/registro.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -11,6 +12,8 @@ import { RegistroPage } from '../pages/registro/registro';
 import { MisGruposPage } from '../pages/mis-grupos/mis-grupos';
 import { NuevoGrupoPage } from '../pages/nuevo-grupo/nuevo-grupo';
 import { GrupoPage } from '../pages/grupo/grupo';
+import { ForoPage } from '../pages/foro/foro';
+import { HilosPage } from '../pages/hilos/hilos';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -35,7 +38,10 @@ import { GroupService } from '../services/group.service';
     LoginPage,
     MisGruposPage,
     NuevoGrupoPage,
-    GrupoPage
+    GrupoPage,
+    BusquedaPage,
+    ForoPage,
+    HilosPage
   ],
   imports: [
     BrowserModule,
@@ -54,7 +60,10 @@ import { GroupService } from '../services/group.service';
     LoginPage,
     MisGruposPage,
     NuevoGrupoPage,
-    GrupoPage
+    GrupoPage,
+    BusquedaPage,
+    ForoPage,
+    HilosPage
   ],
   providers: [
     StatusBar,

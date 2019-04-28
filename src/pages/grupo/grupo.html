@@ -6,12 +6,16 @@
 -->
 <ion-header>
   <ion-navbar >
+      <button ion-button menuToggle end>
+          <ion-icon name="menu"></ion-icon>
+        </button>
     <ion-title>Grupala</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding >
-  <h3 class="titulo">Noticias</h3>
+  <h3 class="titulo">D&D</h3>
+  <h4 class="titulo1">Noticias</h4>
 
   <ion-list *ngFor = "let noticia of noticias" color="dark">
     <ion-card >
@@ -32,9 +36,9 @@
 <ion-footer>
     <ion-toolbar>
         <button ion-button  class="botoncito"  >Noticias</button>
-        <button ion-button    class="botoncito" >Foro</button>
+        <button ion-button    class="botoncito" (click)="goToForo()" >Foro</button>
         <button ion-button   class="botoncito" >Eventos</button>
         <button ion-button    class="botoncito" >Admin</button>
-        <button ion-button     class="botoncito" >Amigos</button>
+        <button ion-button     class="botoncito" (click)="goToLista()" >Amigos</button>
     </ion-toolbar>
 </ion-footer>

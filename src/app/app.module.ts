@@ -10,6 +10,8 @@ import { ListPage } from '../pages/list/list';
 import { RegistroPage } from '../pages/registro/registro';
 import { MisGruposPage } from '../pages/mis-grupos/mis-grupos';
 import { NuevoGrupoPage } from '../pages/nuevo-grupo/nuevo-grupo';
+import { MisEventosPage } from '../pages/mis-eventos/mis-eventos';
+import { NuevoEventoPage } from '../pages/nuevo-evento/nuevo-evento';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -24,6 +26,7 @@ import { ContactService } from '../services/contact.service';
 import { infoService } from './../services/​info.service';
 import { LoginPage } from '../pages/login/login';
 import { GroupService } from '../services/group.service';
+import { EventService } from '../services/event.service';
 
 
 @NgModule({
@@ -34,7 +37,9 @@ import { GroupService } from '../services/group.service';
     ListPage,
     LoginPage,
     MisGruposPage,
-    NuevoGrupoPage
+    NuevoGrupoPage,
+    MisEventosPage,
+    NuevoEventoPage
   ],
   imports: [
     BrowserModule,
@@ -52,7 +57,9 @@ import { GroupService } from '../services/group.service';
     RegistroPage,
     LoginPage,
     MisGruposPage,
-    NuevoGrupoPage
+    NuevoGrupoPage,
+    MisEventosPage,
+    NuevoEventoPage
   ],
   providers: [
     StatusBar,
@@ -60,7 +67,8 @@ import { GroupService } from '../services/group.service';
     infoService,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ContactService,
-    GroupService
+    GroupService,
+    EventService
   ]
 })
 export class AppModule {}

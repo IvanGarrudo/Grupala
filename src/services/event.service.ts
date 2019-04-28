@@ -5,7 +5,7 @@ import { Event } from "../models/event.model";
 @Injectable()
 export class EventService{
 
-    private events: Event [] = [{"nevent":"Gamers","desc":"Bla bla bla bla bla bla bla bla bla bla ","icon":"../../assets/img/space.png"}];
+    private events: Event [] = [{"nevent":"Gamers","desc":"Bla bla bla bla bla bla bla bla bla bla ","icon":"../../assets/imgs/logo.png"}];
     constructor(){
 
     }

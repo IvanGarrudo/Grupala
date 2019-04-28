@@ -2,7 +2,6 @@ import { Event } from './../../models/event.model';
 import { ContactService } from './../../services/contact.service';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Event } from '../../models/event.model';
 import { EventService } from '../../services/event.service';
 import { NuevoEventoPage } from '../nuevo-evento/nuevo-evento';
 

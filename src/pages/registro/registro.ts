@@ -40,6 +40,7 @@ export class RegistroPage {
   
   onAddMember(value: Login){
     this.ContactService.addMember(value);
+    this.ContactService.pushu(value.nusuario);
     this.navCtrl.setRoot(HomePage);
     this.navCtrl.goToRoot;
   }

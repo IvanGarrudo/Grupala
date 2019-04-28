@@ -16,7 +16,7 @@
 
 
   <ion-list>
-    <button ion-item *ngFor="let event of events">
+    <button  (click)="unir()" ion-item *ngFor="let event of events">
       <tr>
         <td>
             <ion-avatar><img [src]="event.icon"></ion-avatar>
@@ -24,7 +24,11 @@
         <td>
           <h2>{{event.nevent}}</h2>
           <h3>{{event.desc}}</h3>
+          <h3>Participantes<br>{{user}}</h3>
+         
         </td>
+        
+        
       </tr>
     </button>
   </ion-list>

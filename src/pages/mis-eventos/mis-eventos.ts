@@ -1,3 +1,4 @@
+import { ContactService } from './../../services/contact.service';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Event } from '../../models/event.model';
@@ -18,14 +19,17 @@ import { NuevoEventoPage } from '../nuevo-evento/nuevo-evento';
 export class MisEventosPage {
   events: Event[] = []
   public searchTerm: string = "";
-
-  constructor(public navCtrl: NavController, public navParams: NavParams, private EventService: EventService) {
+  user="";
+  constructor(public navCtrl: NavController, public navParams: NavParams, private EventService: EventService,private ContactService:ContactService) {
   }
 
   ionViewWillEnter(){
     this.events = this.EventService.getGroup();
   }
-
+  unir(){
+    alert(this.ContactService.getu())
+    this.user="-"+this.ContactService.getu();
+  }
   onLoadEventPage(){
     this.navCtrl.push(NuevoEventoPage);
   }

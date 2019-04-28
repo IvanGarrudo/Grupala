@@ -135,6 +135,8 @@ var NuevoGrupoPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase__ = __webpack_require__(816);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_firebase__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -146,17 +148,38 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var ContactService = /** @class */ (function () {
     function ContactService(db) {
         this.db = db;
-        this.contactsRef = this.db.list('AgendaFirebase');
+        this.contactsRef = this.db.list('Logins');
     }
     ContactService.prototype.addMember = function (value) {
+        __WEBPACK_IMPORTED_MODULE_2_firebase___default.a.database().ref('Logins/' + value.nusuario).set({
+            mail: value.eusuario,
+            contra: value.cusuario
+        });
         // this.contacts.push(value);
-        return this.contactsRef.push(value);
+        //return this.contactsRef.push(value);
     };
-    ContactService.prototype.getContacts = function () {
-        return this.contactsRef.valueChanges().toPromise();
+    ContactService.prototype.getContacts = function (a) {
+        var uno = false;
+        var c = __WEBPACK_IMPORTED_MODULE_2_firebase___default.a.database().ref('/Logins/' + a.nusuario).once('value').then(function (snapshot) {
+            var username = (snapshot.val() && snapshot.val().contra);
+            return username == a.cusuario;
+            /*if(username == a.cusuario){
+                uno = true;
+                return uno;
+            }
+            if(username != a.cusuario){
+                uno = false;
+                return uno;
+            }*/
+        });
+        /*var path = "/Logins/"+a.nusuario+"/contra";
+        var c = firebase.database().ref(path).once('value');
+        alert(c);*/
+        //const l = db.ref('/Logins/');
     };
     ContactService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
@@ -631,6 +654,9 @@ var NoticiaService = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_contact_service__ = __webpack_require__(154);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__registro_registro__ = __webpack_require__(184);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home__ = __webpack_require__(185);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_firebase__ = __webpack_require__(816);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_firebase__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -640,6 +666,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
 
 
 
@@ -660,6 +688,18 @@ var LoginPage = /** @class */ (function () {
         console.log('ionViewDidLoad LoginPage');
     };
     LoginPage.prototype.comprobar = function (a) {
+        //let miembros = [];
+        var c = __WEBPACK_IMPORTED_MODULE_5_firebase___default.a.database().ref('/Logins/' + a.nusuario).once('value').then(function (snapshot) {
+            var username = (snapshot.val() && snapshot.val().contra);
+            if (a.cusuario == username) {
+                this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4__home_home__["a" /* HomePage */]);
+                this.navCtrl.goToRoot;
+            }
+            else {
+                this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__registro_registro__["a" /* RegistroPage */]);
+                this.navCtrl.goToRoot;
+            }
+        });
         /*this.ContactService.getContacts().then(this.contacts){
           var sesion = false;
           console.log(this.contacts)

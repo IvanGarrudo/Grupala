@@ -10,18 +10,18 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding style="background: #232931">
 <form (ngSubmit)="onAddGroup(f.value)" #f="ngForm">
   <ion-list>
-    <ion-item>
+    <ion-item style="background: #232931">
       <ion-label>Nombre</ion-label>
       <ion-input type="text" placeholder="nombre" name="ngroup" ngModel required></ion-input>
     </ion-item>
-    <ion-item>
+    <ion-item style="background: #232931">
       <ion-label>Tema</ion-label>
       <ion-input type="text" placeholder="tema" name="type" ngModel required></ion-input>
     </ion-item>
-    <ion-item>
+    <ion-item style="background: #232931">
         <ion-label>Imagen</ion-label>
         <ion-input type="file" name="foto" ngModel></ion-input>
        </ion-item>

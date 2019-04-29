@@ -15,20 +15,20 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding style="background: #232931">
   <ion-searchbar animated [(ngModel)]="searchTerm" (ionChange)="setFilteredItems()"></ion-searchbar>
 
 
   <ion-list>
-    <ion-item  (click)="goToNoticias()" *ngFor="let group of groups">
+    <ion-item style="background: #232931" (click)="goToNoticias()" *ngFor="let group of groups">
       <tr>
         <td>
             <ion-avatar><img [src]="group.foto"></ion-avatar>
         </td>
         <td>
-          <h2>{{group.ngroup}}</h2>
-          <h3>{{group.type}}</h3>
-          <button ion-button clear (click)="eventosPage()">eventos</button>
+          <h2 style="color: #79848d">{{group.ngroup}}</h2>
+          <h3 style="color: #79848d">{{group.type}}</h3>
+          <button ion-button clear (click)="eventosPage();$event.stopPropagation();">eventos</button>
         </td>
       </tr>
     </ion-item>

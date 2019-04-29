@@ -10,18 +10,18 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding style="background: #232931">
     <form (ngSubmit)="onAddEvent(f.value)" #f="ngForm">
       <ion-list>
-        <ion-item>
+        <ion-item style="background: #232931">
           <ion-label>Nombre</ion-label>
           <ion-input type="text" placeholder="nombre" name="nevent" ngModel required></ion-input>
         </ion-item>
-        <ion-item>
+        <ion-item style="background: #232931">
           <ion-label>Descripción</ion-label>
           <ion-input class="description"  type="text" placeholder="desc" name="desc" ngModel required></ion-input>
         </ion-item>
-        <ion-item>
+        <ion-item style="background: #232931">
             <ion-label>Icono</ion-label>
             <ion-input type="file" name="icon" ngModel ></ion-input>
            </ion-item>

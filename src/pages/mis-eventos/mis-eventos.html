@@ -11,20 +11,20 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding style="background: #232931">
   <ion-searchbar animated [(ngModel)]="searchTerm" (ionChange)="setFilteredItems()"></ion-searchbar>
 
 
   <ion-list>
-    <button ion-item (click)="unir()" *ngFor="let event of events">
+    <button ion-item style="background: #232931" (click)="unir()" *ngFor="let event of events">
       <tr>
         <td>
             <ion-avatar><img [src]="event.icon"></ion-avatar>
         </td>
         <td>
-          <h2>{{event.nevent}}</h2>
-          <h3>{{event.desc}}</h3>
-          <h3>Participantes<br>{{event.user[0]}}</h3>
+          <h2 style="color: #79848d">{{event.nevent}}</h2>
+          <h3 style="color: #79848d">{{event.desc}}</h3>
+          <h3 style="color: #79848d">Participantes<br>{{event.user[0]}}</h3>
               
         </td>
         

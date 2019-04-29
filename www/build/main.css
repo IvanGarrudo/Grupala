@@ -25886,6 +25886,14 @@ ion-searchbar .searchbar-input-container .searchbar-input {
   border-radius: 20px;
 }
 
+.input-has-focus {
+  color: white !important;
+}
+
+.input-has-focus {
+  color: white !important;
+}
+
 .formulario {
   width: 100%;
 }

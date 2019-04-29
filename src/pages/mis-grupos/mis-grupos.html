@@ -34,4 +34,14 @@
     </ion-item>
   </ion-list>
   <button ion-button full color="secondary" (click)="onLoadGroupPage()">Nuevo grupo</button>
+
 </ion-content>
+<ion-footer>
+  <ion-toolbar>
+      <button ion-button  class="botoncito"  >Noticias</button>
+      <button ion-button    class="botoncito" (click)="goToForo()" >Foro</button>
+      <button ion-button   class="botoncito" (click)="goToEventos()" >Eventos</button>
+      <button ion-button    class="botoncito" (click)="goToInfo()" >Cambios</button>
+      <button ion-button     class="botoncito" (click)="goToLista()" >Amigos</button>
+  </ion-toolbar>
+</ion-footer>

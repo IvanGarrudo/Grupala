@@ -5,6 +5,9 @@ import { GroupService } from '../../services/group.service';
 import { NuevoGrupoPage } from '../nuevo-grupo/nuevo-grupo';
 import { MisEventosPage } from '../mis-eventos/mis-eventos';
 import { GrupoPage } from '../grupo/grupo';
+import { ListPage } from '../list/list';
+import { InfoGrupoPage } from '../info-grupo/info-grupo';
+import { ForoPage } from './../foro/foro';
 
 
 @IonicPage()
@@ -51,6 +54,21 @@ export class MisGruposPage {
   }
   goToNoticias(){
     this.navCtrl.push(GrupoPage);
+  }
+  goToForo(){
+    this.navCtrl.push(ForoPage);
+  }
+
+  goToLista(){
+    this.navCtrl.push(ListPage);
+  }
+  
+  goToInfo(){
+    this.navCtrl.push(InfoGrupoPage);
+  }
+
+  goToEventos(){    
+    //this.navCtrl.setRoot(EventosPage);
   }
 
 }

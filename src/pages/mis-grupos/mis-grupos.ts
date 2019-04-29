@@ -9,7 +9,6 @@ import { ListPage } from '../list/list';
 import { InfoGrupoPage } from '../info-grupo/info-grupo';
 import { ForoPage } from './../foro/foro';
 
-
 @IonicPage()
 @Component({
   selector: 'page-mis-grupos',
@@ -68,7 +67,7 @@ export class MisGruposPage {
   }
 
   goToEventos(){    
-    //this.navCtrl.setRoot(EventosPage);
+    this.navCtrl.push(MisEventosPage);
   }
 
 }

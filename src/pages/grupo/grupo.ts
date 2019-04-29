@@ -5,7 +5,7 @@ import { Noticia } from '../../models/noticia.model'
 import { NoticiaService } from '../../services/noticia.service';
 import { ListPage } from '../list/list';
 import { InfoGrupoPage } from '../info-grupo/info-grupo';
-
+import { MisEventosPage } from '../mis-eventos/mis-eventos';
 
 /**
  * Generated class for the GrupoPage page.
@@ -48,7 +48,7 @@ export class GrupoPage {
   }
 
   goToEventos(){    
-    //this.navCtrl.setRoot(EventosPage);
+    this.navCtrl.setRoot(MisEventosPage);
   }
 
 }

@@ -4,10 +4,10 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { EventService } from '../../services/event.service';
 import { NuevoEventoPage } from '../nuevo-evento/nuevo-evento';
-import { GrupoPage } from '../grupo/grupo';
+import { ForoPage } from '../foro/foro';
 import { ListPage } from '../list/list';
 import { InfoGrupoPage } from '../info-grupo/info-grupo';
-import { ForoPage } from './../foro/foro';
+import { GrupoPage } from '../grupo/grupo';
 
 /**
  * Generated class for the MisEventosPage page.
@@ -44,24 +44,24 @@ export class MisEventosPage {
   ngOnInit(){
     this.setFilteredItems();
   }
-  goToNoticias(){
-    this.navCtrl.push(GrupoPage);
-  }
   goToForo(){
-    this.navCtrl.push(ForoPage);
+    this.navCtrl.setRoot(ForoPage);
   }
 
   goToLista(){
-    this.navCtrl.push(ListPage);
+    this.navCtrl.setRoot(ListPage);
   }
   
   goToInfo(){
-    this.navCtrl.push(InfoGrupoPage);
+    this.navCtrl.setRoot(InfoGrupoPage);
+  }
+
+  goToNoticias(){
+    this.navCtrl.setRoot(GrupoPage);
   }
 
   goToEventos(){    
-    this.navCtrl.push(MisEventosPage);
+    this.navCtrl.setRoot(MisEventosPage);
   }
-
 }
 

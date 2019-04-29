@@ -5,34 +5,33 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-    
-  <ion-navbar >
-    <ion-title>Grupala</ion-title>
+  <ion-navbar>
     <button ion-button menuToggle end>
       <ion-icon name="menu"></ion-icon>
     </button>
+    <ion-title style="text-align: center">Grupala</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content  style="background: #232931" padding>
  
   
     
-    <ion-navbar class="buscador" >
-        <ion-searchbar animated [(ngModel)]="searchTerm" (ionChange)="setFilteredItems()" class="entrada"></ion-searchbar>
+    <ion-navbar  style="background: #232931"class="buscador" color="dark" >
+        <ion-searchbar    animated [(ngModel)]="searchTerm" (ionChange)="setFilteredItems()" class="entrada"></ion-searchbar>
         <button ion-button solid  (click)="goToSame()" class="boton" >Buscar</button>
       </ion-navbar>
     
 
-  <ion-list>
-    <button ion-item *ngFor="let group of groups" (click)="goToGrupo()">
+  <ion-list  style="background: #232931">
+    <button style="background: #232931" ion-item *ngFor="let group of groups" (click)="goToGrupo()">
       <tr >
         <td>
-            <ion-avatar><img [src]="group.foto"></ion-avatar>
+            <ion-avatar style="background: #232931"><img [src]="group.foto"></ion-avatar>
         </td>
         <td>
-          <h2>{{group.ngroup}}</h2>
-          <h3>{{group.type}}</h3>
+          <h2 style="background: #232931;color:white;">{{group.ngroup}}</h2>
+          <h3 style="background: #232931;color:#738598;">{{group.type}}</h3>
         </td>
       </tr>
     </button>

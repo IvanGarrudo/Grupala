@@ -6,10 +6,10 @@
 -->
 <ion-header>
   <ion-navbar>
-      <button ion-button menuToggle end>
-          <ion-icon name="menu"></ion-icon>
-      </button>
-    <ion-title>MisEventos</ion-title>
+    <button ion-button menuToggle end>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title style="text-align: center">Grupala</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -37,13 +37,12 @@
   </ion-list>
   <button ion-button full color="secondary" (click)="onLoadEventPage()">Nuevo evento</button>
 </ion-content>
-
-<ion-footer>
-    <ion-toolbar>
-        <button ion-button  class="botoncito"  (click)="goToNoticias()">Noticias</button>
-        <button ion-button    class="botoncito" (click)="goToForo()" >Foro</button>
-        <button ion-button   class="botoncito" >Eventos</button>
-        <button ion-button    class="botoncito" (click)="goToInfo()" >Cambios</button>
-        <button ion-button     class="botoncito" (click)="goToLista()" >Amigos</button>
-    </ion-toolbar>
-  </ion-footer>
+<ion-footer style="background: #232931;">
+  <ion-toolbar >
+    <button ion-button    class="botoncito"  (click)="goToNoticias()">Noticias</button>
+    <button ion-button    class="botoncito" (click)="goToForo()" >Foro</button>
+    <button ion-button    class="botoncito"  >Eventos</button>
+    <button ion-button    class="botoncito" (click)="goToInfo()" >Cambios</button>
+    <button ion-button    class="botoncito" (click)="goToLista()" >Amigos</button>
+  </ion-toolbar>
+</ion-footer>

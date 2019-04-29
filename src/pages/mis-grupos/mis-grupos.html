@@ -7,10 +7,10 @@
 
 <ion-header>
   <ion-navbar>
-      <button ion-button menuToggle end>
-          <ion-icon name="menu"></ion-icon>
-        </button>
-    <ion-title>MisGrupos</ion-title>
+    <button ion-button menuToggle end>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title style="text-align: center">Grupala</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -28,7 +28,6 @@
         <td>
           <h2 style="color: #79848d">{{group.ngroup}}</h2>
           <h3 style="color: #79848d">{{group.type}}</h3>
-          <button ion-button clear (click)="eventosPage();$event.stopPropagation();">eventos</button>
         </td>
       </tr>
     </ion-item>
@@ -36,12 +35,3 @@
   <button ion-button full color="secondary" (click)="onLoadGroupPage()">Nuevo grupo</button>
 
 </ion-content>
-<ion-footer>
-  <ion-toolbar>
-      <button ion-button  class="botoncito"  (click)="goToNoticias()">Noticias</button>
-      <button ion-button    class="botoncito" (click)="goToForo()" >Foro</button>
-      <button ion-button   class="botoncito" (click)="goToEventos()" >Eventos</button>
-      <button ion-button    class="botoncito" (click)="goToInfo()" >Cambios</button>
-      <button ion-button     class="botoncito" (click)="goToLista()" >Amigos</button>
-  </ion-toolbar>
-</ion-footer>

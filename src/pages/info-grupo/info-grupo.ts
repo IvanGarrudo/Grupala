@@ -8,6 +8,7 @@ import { ListPage } from '../list/list';
 import { ForoPage } from '../foro/foro';
 import { Noticia } from '../../models/noticia.model'
 import { NoticiaService } from '../../services/noticia.service';
+import { MisEventosPage } from '../mis-eventos/mis-eventos';
 
 /**
  * Generated class for the InfoGrupoPage page.
@@ -51,6 +52,6 @@ export class InfoGrupoPage {
   }
 
   goToEventos(){    
-    //this.navCtrl.setRoot(EventosPage);
+    this.navCtrl.setRoot(MisEventosPage);
   }
 }

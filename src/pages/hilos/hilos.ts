@@ -19,7 +19,7 @@ import { NoticiaService } from '../../services/noticia.service';
 })
 export class HilosPage {
 
-  public listam:Array<mensajes> = [new mensajes("../assets/imgs/user3.png","Considero que no tienes razón 5º es mejor"), new mensajes("../assets/imgs/user2.png","3.5 es lo unico de D&D que se debería considerar rol"), new mensajes("../assets/imgs/user1.png","Creo que todas las versiones tienen su público, aunque me inclino más por la primera versión, qué opninan ustedes?"),];
+  public listam:Array<mensajes> = [new mensajes("../assets/imgs/user3.png","Considero que no tienes razón 5º es mejor"), new mensajes("../assets/imgs/user1.png","Creo que todas las versiones tienen su público, aunque me inclino más por la primera versión, qué opninan ustedes?"), new mensajes("../assets/imgs/user2.png","3.5 es lo unico de D&D que se debería considerar rol"),];
   constructor(public navCtrl: NavController, public navParams: NavParams, private Nueva :NoticiaService) {
   }
 

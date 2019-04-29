@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { ForoPage } from '../foro/foro';
 import { InfoGrupoPage } from '../info-grupo/info-grupo';
 import { GrupoPage } from '../grupo/grupo';
+import { MisEventosPage } from '../mis-eventos/mis-eventos';
 
 @Component({
   selector: 'page-list',
@@ -64,6 +65,6 @@ export class ListPage {
   }
 
   goToEventos(){    
-    //this.navCtrl.setRoot(EventosPage);
+    this.navCtrl.setRoot(MisEventosPage);
   }
 }

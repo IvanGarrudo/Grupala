@@ -14,7 +14,7 @@ import { EventService } from '../../services/event.service';
   selector: 'page-nuevo-evento',
   templateUrl: 'nuevo-evento.html',
 })
-export class NuevoEventoPage {
+export class NuevoEventoPage  {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private eventService: EventService) {
   }
@@ -23,7 +23,8 @@ export class NuevoEventoPage {
     console.log('ionViewDidLoad NuevoEventoPage');
   }
 
-  onAddEvent(value: {nevent:string, desc:string, icon:string}){
+  onAddEvent(value: {nevent:string, desc:string, icon:string, user}){
+    value.user=[];
     value.icon = value.icon.replace("C:\\fakepath\\", "../../assets/imgs/");
     this.eventService.addGroup(value);
     this.navCtrl.pop();

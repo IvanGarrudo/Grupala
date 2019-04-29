@@ -50,7 +50,7 @@ export class MisGruposPage {
     this.setFilteredItems();
   }
   goToNoticias(){
-    this.navCtrl.setRoot(GrupoPage);
+    this.navCtrl.push(GrupoPage);
   }
 
 }
